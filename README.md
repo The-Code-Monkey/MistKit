@@ -1,12 +1,12 @@
-# MistUI 🚀
+# MistKit 🚀
 
 ## WARNING EARLY ALPHA MIGHT NOT WORK
 
-MistUI is a lightweight React component library built using MistCSS, a novel approach to writing visual components solely with CSS. Say goodbye to CSS-in-JS, because with MistCSS, you get JS-from-CSS, making your development process faster and more efficient.
+MistKit is a lightweight React component library built using MistCSS, a novel approach to writing visual components solely with CSS. Say goodbye to CSS-in-JS, because with MistCSS, you get JS-from-CSS, making your development process faster and more efficient.
 
 ## Introduction
 
-MistUI offers a collection of customizable and reusable React components that are crafted using MistCSS. Whether you're building a simple web application or a complex user interface, our library provides you with the tools you need to create visually stunning interfaces effortlessly.
+MistKit offers a collection of customizable and reusable React components that are crafted using MistCSS. Whether you're building a simple web application or a complex user interface, our library provides you with the tools you need to create visually stunning interfaces effortlessly.
 
 ## Features
 
@@ -17,23 +17,23 @@ MistUI offers a collection of customizable and reusable React components that ar
 
 ## Installation
 
-To start using MistUI in your project, simply install it via npm or yarn:
+To start using MistKit in your project, simply install it via npm or yarn:
 
 ```bash
-npm install mistui
+npm install mist-kit
 # or
-yarn add mistui
+yarn add mist-kit
 # or
-bun add mistui
+bun add mist-kit
 ```
 
 ## Usage
 
-Import components from MistUI into your React application and start using them right away:
+Import components from MistKit into your React application and start using them right away:
 
 ```jsx
 import React from 'react';
-import { Button, Card, TextInput } from 'my-component-library';
+import { Button, Card, TextInput } from 'mist-kit';
 
 const App = () => {
   return (
