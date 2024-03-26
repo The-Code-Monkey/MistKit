@@ -1,5 +1,7 @@
 # MistUI 🚀
 
+## WARNING EARLY ALPHA MIGHT NOT WORK
+
 MistUI is a lightweight React component library built using MistCSS, a novel approach to writing visual components solely with CSS. Say goodbye to CSS-in-JS, because with MistCSS, you get JS-from-CSS, making your development process faster and more efficient.
 
 ## Introduction
