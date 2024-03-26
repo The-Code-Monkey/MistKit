@@ -1,0 +1,165 @@
+@scope (.flex) {
+    div:scope {
+        &[data-direction='row'] {
+            @apply flex-row
+        }
+
+        &[data-direction='row-reverse'] {
+            @apply flex-row-reverse
+        }
+
+        &[data-direction='col-reverse'] {
+            @apply flex-col-reverse
+        }
+
+        &[data-justify='start'] {
+            @apply justify-start
+        }
+
+        &[data-justify='end'] {
+            @apply justify-end
+        }
+
+        &[data-justify='center'] {
+            @apply justify-center
+        }
+
+        &[data-justify='between'] {
+            @apply justify-between
+        }
+
+        &[data-justify='around'] {
+            @apply justify-around
+        }
+
+        &[data-items='start'] {
+            @apply items-start
+        }
+
+        &[data-items='end'] {
+            @apply items-end
+        }
+
+        &[data-items='center'] {
+            @apply items-center
+        }
+
+        &[data-items='baseline'] {
+            @apply items-baseline
+        }
+
+        &[data-items='stretch'] {
+            @apply items-stretch
+        }
+
+        &[data-content='start'] {
+            @apply content-start
+        }
+
+        &[data-content='end'] {
+            @apply content-end
+        }
+
+        &[data-content='center'] {
+            @apply content-center
+        }
+
+        &[data-content='between'] {
+            @apply content-between
+        }
+
+        &[data-content='around'] {
+            @apply content-around
+        }
+
+        &[data-content='stretch'] {
+            @apply content-stretch
+        }
+
+        &[data-gap='0'] {
+            @apply gap-0
+        }
+
+        &[data-gap='1'] {
+            @apply gap-1
+        }
+
+        &[data-gap='2'] {
+            @apply gap-2
+        }
+
+        &[data-gap='3'] {
+            @apply gap-3
+        }
+
+        &[data-gap='4'] {
+            @apply gap-4
+        }
+
+        &[data-gap='5'] {
+            @apply gap-5
+        }
+
+        &[data-gap='6'] {
+            @apply gap-6
+        }
+
+        &[data-gap='7'] {
+            @apply gap-7
+        }
+
+        &[data-gap='8'] {
+            @apply gap-8
+        }
+
+        &[data-gap='9'] {
+            @apply gap-9
+        }
+
+        &[data-gap='10'] {
+            @apply gap-10
+        }
+
+        &[data-gap='11'] {
+            @apply gap-11
+        }
+
+        &[data-gap='12'] {
+            @apply gap-12
+        }
+
+        &[data-gap='14'] {
+            @apply gap-14
+        }
+
+        &[data-gap='16'] {
+            @apply gap-16
+        }
+
+        &[data-gap='20'] {
+            @apply gap-20
+        }
+
+        &[data-gap='24'] {
+            @apply gap-24
+        }
+
+        &[data-gap='28'] {
+            @apply gap-28
+        }
+
+        &[data-gap='32'] {
+            @apply gap-32
+        }
+
+        &[data-gap='36'] {
+            @apply gap-36
+        }
+
+        &[data-gap='40'] {
+            @apply gap-40
+        }
+
+        @apply flex flex-col
+    }
+}
