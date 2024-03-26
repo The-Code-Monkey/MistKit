@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "importHelpers": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noEmit": false,
+    "rootDir": "src",
+    "outDir": "./dist/esm",
+    "declarationDir": "dist/types",
+    "jsx": "react-jsx",
+    "lib": ["dom"],
+    "strict": true,
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "src/stories/*"]
+}

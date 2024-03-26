@@ -1,0 +1,136 @@
+{
+  "extends": [
+    "hardcore",
+    "hardcore/fp",
+    "hardcore/react",
+    "hardcore/react-performance",
+    "hardcore/ts",
+    "plugin:readable-tailwind/error",
+    "hardcore/prettier"
+  ],
+  "globals": {
+    "Image": "off"
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["readable-tailwind", "@typescript-eslint","prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "new-cap": "off",
+    "react/display-name": "off",
+    "import/no-cycle": ["error", {"ignoreExternal": false, "maxDepth": 1}],
+    "no-object-constructor": "off",
+    "sonar/function-return-type": "off",
+    "import/no-unused-modules": ["error", { "missingExports": true, "unusedExports": true, "ignoreExports": ["src/**/*.stories.tsx"] }],
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/prefer-function-type": "off",
+    "max-statements": "off",
+    // These are required
+    "compat/compat": "off",
+    "regexp/require-unicode-regexp": "off",
+    "regexp/require-unicode-sets-regexp": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "total-functions/no-partial-division": "off",
+    "react/jsx-no-bind": "off",
+    "no-underscore-dangle": "off",
+    "putout/putout": "off",
+    "react/no-danger": "off",
+    "react-perf/jsx-no-new-object-as-prop": "off",
+    "readable-tailwind/multiline": ["error", { "printWidth": 100 }],
+    "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    "no-restricted-syntax": [
+      "error",
+      "FunctionExpression",
+      "FunctionDeclaration"
+    ],
+    "func-style": "off",
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "property",
+        "filter": "^__html$",
+        "format": null
+      },{
+        "selector": "parameter",
+        "filter": "^__html$",
+        "format": null
+      },
+      {
+        "selector": "variable",
+        "format": ["camelCase", "UPPER_CASE", "PascalCase"]
+      },
+      {
+        "selector": "parameter",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "property",
+        "format": ["camelCase", "UPPER_CASE"],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "enumMember",
+        "format": ["UPPER_CASE"]
+      },
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      },
+      {
+        "selector": "typeAlias",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^T[A-Z]",
+          "match": true
+        }
+      },
+      {
+        "selector": "class",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "import",
+        "format": ["camelCase", "PascalCase"]
+      }
+    ],
+    "react/forbid-component-props": "off",
+    "complexity": "off",
+    "@typescript-eslint/no-shadow": ["error", {
+      "ignoreTypeValueShadow": true
+    }],
+    "@typescript-eslint/no-unsafe-call": "off",
+    "lines-around-comment": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.*"],
+
+      "rules": {
+        "max-lines": ["error", 500]
+      }
+    }
+  ]
+}

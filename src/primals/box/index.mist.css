@@ -1,0 +1,17 @@
+@scope(.box) {
+    div:scope {
+        @apply bg-white dark:bg-gray-800 p-2
+
+        &[data-size='xs'] {
+            @apply p-1
+        }
+
+        &[data-size='md'] {
+            @apply p-4
+        }
+
+        &[data-size='lg'] {
+            @apply p-8
+        }
+    }
+}

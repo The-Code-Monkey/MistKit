@@ -1,0 +1,17 @@
+@scope (.buttongroup) {
+    div:scope {
+        button {
+            &:first-of-type {
+                @apply rounded-l-md
+            }
+
+            &:last-of-type {
+                @apply rounded-r-md
+            }
+
+            &:not(:first-of-type):not(:last-of-type) {
+                @apply -ml-px
+            }
+        }
+    }
+}
