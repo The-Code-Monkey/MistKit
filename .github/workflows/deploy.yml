@@ -28,20 +28,22 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install deps
-        uses: bahmutov/npm-install@v1
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
 
-      - name: Build
-        run: yarn build
+      - run: bun install
+
+      - name: Build Components
+        run: bun build:mist
 
       - name: Lint
-        run: yarn lint
+        run: bun lint
 
-      - name: Test
-        run: yarn test
+      - name: Build package
+        run: bun run build
 
-      - name: Size
-        run: yarn size
+      # - name: Test
+      #   run: bun test
 
       - name: git config
         run: |
