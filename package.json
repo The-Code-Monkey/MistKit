@@ -30,7 +30,7 @@
     "build-storybook": "storybook build",
     "build:mist": "mistcss ./src",
     "build": "tsc --project tsconfig.json && cp ./src/main.css ./dist/esm/main.css",
-    "lint": "eslint ./src --fix",
+    "lint": "eslint ./src/primals ./src/atoms --fix",
     "prepare": "husky"
   }
 }

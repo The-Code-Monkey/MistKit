@@ -1,4 +1,4 @@
-@scope (.buttongroup) {
+@scope (.button-group) {
     div:scope {
         button {
             &:first-of-type {
