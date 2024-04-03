@@ -2,7 +2,7 @@
 
 ## WARNING EARLY ALPHA MIGHT NOT WORK
 
-(Mist Kit Docs)[https://mist-kit.vercel.app/]
+[Mist Kit Docs](https://mist-kit.vercel.app/)
 
 MistKit is a lightweight React component library built using MistCSS, a novel approach to writing visual components solely with CSS. Say goodbye to CSS-in-JS, because with MistCSS, you get JS-from-CSS, making your development process faster and more efficient.
 
