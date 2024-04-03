@@ -1,17 +1,19 @@
 @scope(.box) {
     div:scope {
-        @apply bg-white dark:bg-gray-800 p-2
+        background-color: var(--color-neutrals-0);
+        padding: var(--spacing-2);
+        /*@apply bg-white dark:bg-gray-800 p-2*/
 
         &[data-size='xs'] {
-            @apply p-1
+            padding: var(--spacing-1);
         }
 
         &[data-size='md'] {
-            @apply p-4
+            padding: var(--spacing-4);
         }
 
         &[data-size='lg'] {
-            @apply p-8
+            padding: var(--spacing-8);
         }
     }
 }

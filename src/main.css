@@ -1,3 +1,82 @@
-@import "src/atoms/buttongroup/index.mist.css";
-@import "./primals/button/index.mist.css";
-@import "./primals/box/index.mist.css";
+@import "tailwindcss/index.css";
+
+:root {
+    @media (prefers-color-scheme: dark):not(.light) {
+        --color-text: #ffffff;
+        --color-text-inverse: #000000;
+        --color-danger: #b10303;
+        --color-success: #00b809;
+        --color-warning: #a68b02;
+        --color-info: #10169f;
+
+        --color-neutrals-0: oklch(0% 0.01 280);
+        --color-neutrals-1: oklch(2% 0.01 280);
+        --color-neutrals-2: oklch(4% 0.01 280);
+        --color-neutrals-3: oklch(6% 0.01 280);
+        --color-neutrals-4: oklch(8% 0.01 280);
+        --color-neutrals-5: oklch(10% 0.01 280);
+        --color-neutrals-6: oklch(15% 0.01 280);
+        --color-neutrals-7: oklch(20% 0.01 280);
+        --color-neutrals-8: oklch(25% 0.01 280);
+        --color-neutrals-9: oklch(30% 0.01 280);
+        --color-neutrals-10: oklch(35% 0.01 280);
+        --color-neutrals-11: oklch(40% 0.01 280);
+        --color-neutrals-12: oklch(45% 0.01 280);
+        --color-neutrals-13: oklch(50% 0.01 280);
+        --color-neutrals-14: oklch(55% 0.01 280);
+        --color-neutrals-15: oklch(60% 0.01 280);
+        --color-neutrals-16: oklch(65% 0.01 280);
+        --color-neutrals-17: oklch(70% 0.01 280);
+        --color-neutrals-18: oklch(75% 0.01 280);
+        --color-neutrals-19: oklch(80% 0.01 280);
+        --color-neutrals-20: oklch(85% 0.01 280);
+        --color-neutrals-21: oklch(90% 0.01 280);
+        --color-neutrals-22: oklch(92% 0.01 280);
+        --color-neutrals-23: oklch(94% 0.01 280);
+        --color-neutrals-24: oklch(96% 0.01 280);
+        --color-neutrals-25: oklch(98% 0.01 280);
+        --color-neutrals-26: oklch(100% 0.01 280);
+    }
+}
+
+@theme {
+    --color-text: #000000;
+    --color-text-inverse: #ffffff;
+    --color-danger: #ff0000;
+    --color-success: #00ff00;
+    --color-warning: #ffff00;
+    --color-info: #0000ff;
+    --color-danger-hover: #d70000;
+    --color-success-hover: #00e606;
+    --color-warning-hover: #fadd05;
+    --color-info-hover: #0609bf;
+
+    --color-neutrals-0: oklch(100% 0.01 280);
+    --color-neutrals-1: oklch(98% 0.01 280);
+    --color-neutrals-2: oklch(96% 0.01 280);
+    --color-neutrals-3: oklch(94% 0.01 280);
+    --color-neutrals-4: oklch(92% 0.01 280);
+    --color-neutrals-5: oklch(90% 0.01 280);
+    --color-neutrals-6: oklch(85% 0.01 280);
+    --color-neutrals-7: oklch(80% 0.01 280);
+    --color-neutrals-8: oklch(75% 0.01 280);
+    --color-neutrals-9: oklch(70% 0.01 280);
+    --color-neutrals-10: oklch(65% 0.01 280);
+    --color-neutrals-11: oklch(60% 0.01 280);
+    --color-neutrals-12: oklch(55% 0.01 280);
+    --color-neutrals-13: oklch(50% 0.01 280);
+    --color-neutrals-14: oklch(45% 0.01 280);
+    --color-neutrals-15: oklch(40% 0.01 280);
+    --color-neutrals-16: oklch(35% 0.01 280);
+    --color-neutrals-17: oklch(30% 0.01 280);
+    --color-neutrals-18: oklch(25% 0.01 280);
+    --color-neutrals-19: oklch(20% 0.01 280);
+    --color-neutrals-20: oklch(15% 0.01 280);
+    --color-neutrals-21: oklch(10% 0.01 280);
+    --color-neutrals-22: oklch(8% 0.01 280);
+    --color-neutrals-23: oklch(6% 0.01 280);
+    --color-neutrals-24: oklch(4% 0.01 280);
+    --color-neutrals-25: oklch(2% 0.01 280);
+    --color-neutrals-26: oklch(0% 0.01 280);
+}
+

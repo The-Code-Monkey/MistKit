@@ -5,7 +5,6 @@
     "hardcore/react",
     "hardcore/react-performance",
     "hardcore/ts",
-    "plugin:readable-tailwind/error",
     "hardcore/prettier"
   ],
   "globals": {
@@ -14,7 +13,7 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["readable-tailwind", "@typescript-eslint", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "new-cap": "off",
@@ -22,7 +21,9 @@
     "import/no-cycle": ["error", {"ignoreExternal": false, "maxDepth": 1}],
     "no-object-constructor": "off",
     "sonar/function-return-type": "off",
-    "import/no-unused-modules": ["error", { "missingExports": true, "unusedExports": true, "ignoreExports": ["src/**/*.stories.tsx"] }],
+    "react/no-multi-comp": "off",
+    "import/exports-last": "off",
+    "import/no-unused-modules": ["error", { "missingExports": true, "unusedExports": true, "ignoreExports": ["pages/**/*.tsx"] }],
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/prefer-function-type": "off",
     "max-statements": "off",
@@ -38,7 +39,7 @@
     "putout/putout": "off",
     "react/no-danger": "off",
     "react-perf/jsx-no-new-object-as-prop": "off",
-    "readable-tailwind/multiline": ["error", { "printWidth": 100 }],
+//    "readable-tailwind/multiline": ["error", { "printWidth": 100 }],
     "@typescript-eslint/prefer-readonly-parameter-types": "off",
     "no-restricted-syntax": [
       "error",

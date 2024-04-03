@@ -1,0 +1,18 @@
+{
+  "name": "mist-kit",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "react": "18.2.0",
+    "tailwindcss": "4.0.0-alpha.11"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build-storybook": "storybook build",
+    "build:mist": "mistcss --watch ./src",
+    "build:docs": "next build",
+    "build": "tsc --project tsconfig.build.json && cp ./src/main.css ./dist/esm/main.css",
+    "lint": "eslint ./src/primals ./src/atoms ./app --fix",
+    "prepare": "husky"
+  }
+}

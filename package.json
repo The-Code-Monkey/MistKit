@@ -2,36 +2,36 @@
   "name": "mist-kit",
   "version": "0.0.1",
   "dependencies": {
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "next": "14.1.4"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "1.2.26",
-    "@storybook/addon-essentials": "8.0.5",
-    "@storybook/addon-interactions": "8.0.5",
-    "@storybook/addon-links": "8.0.5",
-    "@storybook/addon-onboarding": "8.0.5",
-    "@storybook/addon-webpack5-compiler-swc": "1.0.2",
-    "@storybook/blocks": "8.0.5",
-    "@storybook/react": "8.0.5",
-    "@storybook/react-webpack5": "8.0.5",
-    "@storybook/test": "8.0.5",
+    "@types/react": "18.2.74",
+    "concurrently": "^8.2.2",
     "eslint": "8.57.0",
     "eslint-config-hardcore": "45.4.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-readable-tailwind": "1.2.5",
-    "husky": "^9.0.11",
+    "husky": "9.0.11",
     "mistcss": "0.3.8",
-    "prop-types": "15.8.1",
-    "storybook": "8.0.5",
-    "tailwindcss": "3.4.3",
+    "nextra": "2.13.4",
+    "nextra-theme-docs": "^2.13.4",
+    "tailwindcss": "4.0.0-alpha.11",
     "typescript": "5.4.3"
   },
   "scripts": {
-    "storybook": "storybook dev -p 6006",
+
+    "start": "next start",
     "build-storybook": "storybook build",
     "build:mist": "mistcss ./src",
-    "build": "tsc --project tsconfig.json && cp ./src/main.css ./dist/esm/main.css",
-    "lint": "eslint ./src/primals ./src/atoms --fix",
-    "prepare": "husky"
+    "build:docs": "next build",
+    "build": "bun build:mist && tsc --project tsconfig.build.json && cp ./src/main.css ./dist/esm/main.css && rm -rf package.json && cp ./build.package.json ./package.json",
+    "lint": "eslint ./src/primals ./src/atoms pages --fix",
+    "prepare": "husky",
+    "watch:dev": "next dev",
+    "watch:mist": "mistcss --watch ./src",
+    "watch:css": "npx @tailwindcss/cli@next --watch -i ./pages/globals.css -o ./pages/main.css",
+    "watch": "concurrently \"bun:watch:*\""
   }
 }

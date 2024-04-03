@@ -1,0 +1,30 @@
+import { Box } from '@/primals';
+
+# Box
+
+The `Box` component is a primitive component that can be used to create a box with padding using the size prop (more to come).
+
+```jsx
+  <Box size="(xs|md|lg)">
+    <Text color="white">Hello, world!</Text>
+  </Box>
+```
+
+## Examples
+
+### md
+<Box size="md" style={{ background: 'red' }}>
+  Hello world
+</Box>
+
+
+### lg
+<Box size="lg" style={{ background: 'green' }}>
+  Hello world
+</Box>
+
+## Props
+
+| Name | Type   | Default | Description          | Relative Values                |
+| ---- | ------ | ------- | -------------------- | ------------------------------ |
+| size | string | 'sm'    | The size of the box. | xs = 1, sm = 2, md = 4, lg = 8 |

@@ -1,16 +1,68 @@
 @scope (.button-group) {
     div:scope {
         button {
+            background-color: var(--color-neutrals-0);
+
             &:first-of-type {
-                @apply rounded-l-md
+                border-top-left-radius: var(--radius-md);
+                border-bottom-left-radius: var(--radius-md);
             }
 
             &:last-of-type {
-                @apply rounded-r-md
+                border-top-right-radius: var(--radius-md);
+                border-bottom-right-radius: var(--radius-md);
             }
 
-            &:not(:first-of-type):not(:last-of-type) {
-                @apply -ml-px
+            &:not(:first-of-type) {
+                margin-left: calc(var(--spacing-px) * -1);
+            }
+
+            &[data-size='lg'] {
+                font-size: var(--font-size-lg);
+            }
+
+            &[data-size='sm'] {
+                font-size: var(--font-size-sm);
+            }
+
+            &[data-variant="danger"] {
+                background-color: var(--color-danger);
+                color: var(--color-white);
+                /*@apply bg-danger-default text-white dark:bg-danger-dark dark:text-white hover:bg-danger-hover;*/
+
+                &:hover {
+                    background-color: var(--color-danger-hover);
+                }
+            }
+
+            &[data-variant="info"] {
+                background-color: var(--color-info);
+                color: var(--color-white);
+                /*@apply bg-info-default text-white dark:bg-info-dark dark:text-white hover:bg-info-hover;*/
+
+                &:hover {
+                    background-color: var(--color-info-hover);
+                }
+            }
+
+            &[data-variant="success"] {
+                background-color: var(--color-success);
+                color: var(--color-white);
+                /*@apply bg-success-default text-white dark:bg-success-dark dark:text-white hover:bg-success-hover;*/
+
+                &:hover {
+                    background-color: var(--color-success-hover);
+                }
+            }
+
+            &[data-variant="warning"] {
+                background-color: var(--color-warning);
+                color: var(--color-white);
+                /*@apply bg-warning-default text-white dark:bg-warning-dark dark:text-white hover:bg-warning-hover;*/
+
+                &:hover {
+                    background-color: var(--color-warning-hover);
+                }
             }
         }
     }
