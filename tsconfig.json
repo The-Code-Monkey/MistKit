@@ -11,7 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "noEmit": false,
-    "rootDir": "src",
+    "rootDir": "./",
     "outDir": "./dist/esm",
     "declarationDir": "dist/types",
     "jsx": "preserve",

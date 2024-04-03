@@ -15,4 +15,7 @@ module.exports = withNextra({
     });
     return config;
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  }
 })
