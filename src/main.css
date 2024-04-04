@@ -1,82 +1,123 @@
-@import "tailwindcss/index.css";
+@import "tailwindcss";
+@layer theme, base, components, utilities;
 
 :root {
-    @media (prefers-color-scheme: dark):not(.light) {
-        --color-text: #ffffff;
-        --color-text-inverse: #000000;
-        --color-danger: #b10303;
-        --color-success: #00b809;
-        --color-warning: #a68b02;
-        --color-info: #10169f;
+    --neutrals-base: 0.01 280;
+    --neutrals-0: oklch(100% var(--neutrals-base));
+    --neutrals-1: oklch(98% var(--neutrals-base));
+    --neutrals-2: oklch(96% var(--neutrals-base));
+    --neutrals-3: oklch(94% var(--neutrals-base));
+    --neutrals-4: oklch(92% var(--neutrals-base));
+    --neutrals-5: oklch(90% var(--neutrals-base));
+    --neutrals-6: oklch(85% var(--neutrals-base));
+    --neutrals-7: oklch(80% var(--neutrals-base));
+    --neutrals-8: oklch(75% var(--neutrals-base));
+    --neutrals-9: oklch(70% var(--neutrals-base));
+    --neutrals-10: oklch(65% var(--neutrals-base));
+    --neutrals-11: oklch(60% var(--neutrals-base));
+    --neutrals-12: oklch(55% var(--neutrals-base));
+    --neutrals-13: oklch(50% var(--neutrals-base));
+    --neutrals-14: oklch(45% var(--neutrals-base));
+    --neutrals-15: oklch(40% var(--neutrals-base));
+    --neutrals-16: oklch(35% var(--neutrals-base));
+    --neutrals-17: oklch(30% var(--neutrals-base));
+    --neutrals-18: oklch(25% var(--neutrals-base));
+    --neutrals-19: oklch(20% var(--neutrals-base));
+    --neutrals-20: oklch(15% var(--neutrals-base));
+    --neutrals-21: oklch(10% var(--neutrals-base));
+    --neutrals-22: oklch(8% var(--neutrals-base));
+    --neutrals-23: oklch(6% var(--neutrals-base));
+    --neutrals-24: oklch(4% var(--neutrals-base));
+    --neutrals-25: oklch(2% var(--neutrals-base));
+    --neutrals-26: oklch(0% var(--neutrals-base));
+}
 
-        --color-neutrals-0: oklch(0% 0.01 280);
-        --color-neutrals-1: oklch(2% 0.01 280);
-        --color-neutrals-2: oklch(4% 0.01 280);
-        --color-neutrals-3: oklch(6% 0.01 280);
-        --color-neutrals-4: oklch(8% 0.01 280);
-        --color-neutrals-5: oklch(10% 0.01 280);
-        --color-neutrals-6: oklch(15% 0.01 280);
-        --color-neutrals-7: oklch(20% 0.01 280);
-        --color-neutrals-8: oklch(25% 0.01 280);
-        --color-neutrals-9: oklch(30% 0.01 280);
-        --color-neutrals-10: oklch(35% 0.01 280);
-        --color-neutrals-11: oklch(40% 0.01 280);
-        --color-neutrals-12: oklch(45% 0.01 280);
-        --color-neutrals-13: oklch(50% 0.01 280);
-        --color-neutrals-14: oklch(55% 0.01 280);
-        --color-neutrals-15: oklch(60% 0.01 280);
-        --color-neutrals-16: oklch(65% 0.01 280);
-        --color-neutrals-17: oklch(70% 0.01 280);
-        --color-neutrals-18: oklch(75% 0.01 280);
-        --color-neutrals-19: oklch(80% 0.01 280);
-        --color-neutrals-20: oklch(85% 0.01 280);
-        --color-neutrals-21: oklch(90% 0.01 280);
-        --color-neutrals-22: oklch(92% 0.01 280);
-        --color-neutrals-23: oklch(94% 0.01 280);
-        --color-neutrals-24: oklch(96% 0.01 280);
-        --color-neutrals-25: oklch(98% 0.01 280);
-        --color-neutrals-26: oklch(100% 0.01 280);
-    }
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+        @layer custom {
+            :root:not(.light) {
+                --color-text: #ffffff;
+                --color-text-inverse: #000000;
+                --color-danger: #b10303;
+                --color-danger-text: var(--color-text);
+                --color-success: #00b809;
+                --color-success-text: var(--color-text-inverse);
+                --color-warning: #a68b02;
+                --color-warning-text: var(--color-text-inverse);
+                --color-info: #10169f;
+                --color-info-text: var(--color-text);
+
+                --color-neutrals-0: var(--neutrals-26);
+                --color-neutrals-1: var(--neutrals-25);
+                --color-neutrals-2: var(--neutrals-24);
+                --color-neutrals-3: var(--neutrals-23);
+                --color-neutrals-4: var(--neutrals-22);
+                --color-neutrals-5: var(--neutrals-21);
+                --color-neutrals-6: var(--neutrals-20);
+                --color-neutrals-7: var(--neutrals-19);
+                --color-neutrals-8: var(--neutrals-18);
+                --color-neutrals-9: var(--neutrals-17);
+                --color-neutrals-10: var(--neutrals-16);
+                --color-neutrals-11: var(--neutrals-15);
+                --color-neutrals-12: var(--neutrals-14);
+                --color-neutrals-13: var(--neutrals-13);
+                --color-neutrals-14: var(--neutrals-12);
+                --color-neutrals-15: var(--neutrals-11);
+                --color-neutrals-16: var(--neutrals-10);
+                --color-neutrals-17: var(--neutrals-9);
+                --color-neutrals-18: var(--neutrals-8);
+                --color-neutrals-19: var(--neutrals-7);
+                --color-neutrals-20: var(--neutrals-6);
+                --color-neutrals-21: var(--neutrals-5);
+                --color-neutrals-22: var(--neutrals-4);
+                --color-neutrals-23: var(--neutrals-3);
+                --color-neutrals-24: var(--neutrals-2);
+                --color-neutrals-25: var(--neutrals-1);
+                --color-neutrals-26: var(--neutrals-0);
+            }
+        }
 }
 
 @theme {
     --color-text: #000000;
     --color-text-inverse: #ffffff;
     --color-danger: #ff0000;
+    --color-danger-text: var(--color-text-inverse);
     --color-success: #00ff00;
+    --color-success-text: var(--color-text-inverse);
     --color-warning: #ffff00;
+    --color-warning-text: var(--color-text-inverse);
     --color-info: #0000ff;
+    --color-info-text: var(--color-text-inverse);
     --color-danger-hover: #d70000;
     --color-success-hover: #00e606;
     --color-warning-hover: #fadd05;
     --color-info-hover: #0609bf;
 
-    --color-neutrals-0: oklch(100% 0.01 280);
-    --color-neutrals-1: oklch(98% 0.01 280);
-    --color-neutrals-2: oklch(96% 0.01 280);
-    --color-neutrals-3: oklch(94% 0.01 280);
-    --color-neutrals-4: oklch(92% 0.01 280);
-    --color-neutrals-5: oklch(90% 0.01 280);
-    --color-neutrals-6: oklch(85% 0.01 280);
-    --color-neutrals-7: oklch(80% 0.01 280);
-    --color-neutrals-8: oklch(75% 0.01 280);
-    --color-neutrals-9: oklch(70% 0.01 280);
-    --color-neutrals-10: oklch(65% 0.01 280);
-    --color-neutrals-11: oklch(60% 0.01 280);
-    --color-neutrals-12: oklch(55% 0.01 280);
-    --color-neutrals-13: oklch(50% 0.01 280);
-    --color-neutrals-14: oklch(45% 0.01 280);
-    --color-neutrals-15: oklch(40% 0.01 280);
-    --color-neutrals-16: oklch(35% 0.01 280);
-    --color-neutrals-17: oklch(30% 0.01 280);
-    --color-neutrals-18: oklch(25% 0.01 280);
-    --color-neutrals-19: oklch(20% 0.01 280);
-    --color-neutrals-20: oklch(15% 0.01 280);
-    --color-neutrals-21: oklch(10% 0.01 280);
-    --color-neutrals-22: oklch(8% 0.01 280);
-    --color-neutrals-23: oklch(6% 0.01 280);
-    --color-neutrals-24: oklch(4% 0.01 280);
-    --color-neutrals-25: oklch(2% 0.01 280);
-    --color-neutrals-26: oklch(0% 0.01 280);
+    --color-neutrals-0: var(--neutrals-0);
+    --color-neutrals-1: var(--neutrals-1);
+    --color-neutrals-2: var(--neutrals-2);
+    --color-neutrals-3: var(--neutrals-3);
+    --color-neutrals-4: var(--neutrals-4);
+    --color-neutrals-5: var(--neutrals-5);
+    --color-neutrals-6: var(--neutrals-6);
+    --color-neutrals-7: var(--neutrals-7);
+    --color-neutrals-8: var(--neutrals-8);
+    --color-neutrals-9: var(--neutrals-9);
+    --color-neutrals-10: var(--neutrals-10);
+    --color-neutrals-11: var(--neutrals-11);
+    --color-neutrals-12: var(--neutrals-12);
+    --color-neutrals-13: var(--neutrals-13);
+    --color-neutrals-14: var(--neutrals-14);
+    --color-neutrals-15: var(--neutrals-15);
+    --color-neutrals-16: var(--neutrals-16);
+    --color-neutrals-17: var(--neutrals-17);
+    --color-neutrals-18: var(--neutrals-18);
+    --color-neutrals-19: var(--neutrals-19);
+    --color-neutrals-20: var(--neutrals-20);
+    --color-neutrals-21: var(--neutrals-21);
+    --color-neutrals-22: var(--neutrals-22);
+    --color-neutrals-23: var(--neutrals-23);
+    --color-neutrals-24: var(--neutrals-24);
+    --color-neutrals-25: var(--neutrals-25);
+    --color-neutrals-26: var(--neutrals-26);
 }
-
