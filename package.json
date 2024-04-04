@@ -20,7 +20,7 @@
     "nextra": "2.13.4",
     "nextra-theme-docs": "2.13.4",
     "tailwindcss": "4.0.0-alpha.11",
-    "typescript": "5.4.3"
+    "typescript": "5.4.4"
   },
   "scripts": {
     "start": "next start",
