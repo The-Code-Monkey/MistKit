@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.0.0-alpha.11",
-    "@types/node": "20.12.3",
+    "@types/node": "20.12.4",
     "@types/react": "18.2.74",
     "concurrently": "^8.2.2",
     "eslint": "8.57.0",
