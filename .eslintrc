@@ -18,6 +18,8 @@
     "prettier/prettier": "error",
     "new-cap": "off",
     "react/display-name": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
     "import/no-cycle": ["error", {"ignoreExternal": false, "maxDepth": 1}],
     "no-object-constructor": "off",
     "sonar/function-return-type": "off",
