@@ -5,13 +5,11 @@ import type { JSX, ReactNode } from 'react'
 
 type CellProps = {
   children?: ReactNode
-  columns?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12'
-  rows?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12'
 } & JSX.IntrinsicElements['div']
 
-export function Cell({ children, columns, rows, ...props }: CellProps) {
+export function Cell({ children, ...props }: CellProps) {
   return (
-    <div {...props} className="cell" data-columns={columns} data-rows={rows}>
+    <div {...props} className="cell">
       {children}
     </div>
   )
@@ -19,13 +17,11 @@ export function Cell({ children, columns, rows, ...props }: CellProps) {
 
 type GridProps = {
   children?: ReactNode
-  columns?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12'
-  rows?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12'
 } & JSX.IntrinsicElements['div']
 
-export function Grid({ children, columns, rows, ...props }: GridProps) {
+export function Grid({ children, ...props }: GridProps) {
   return (
-    <div {...props} className="grid" data-columns={columns} data-rows={rows}>
+    <div {...props} className="grid">
       {children}
     </div>
   )

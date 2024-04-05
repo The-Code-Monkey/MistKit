@@ -42,6 +42,9 @@ jobs:
       - name: Build package
         run: bun run build
 
+      - name: Build Copy
+        run: bun build:copy
+
       # - name: Test
       #   run: bun test
 

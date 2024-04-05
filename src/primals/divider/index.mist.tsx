@@ -3,14 +3,14 @@ import './index.mist.css'
 
 import type { JSX, ReactNode } from 'react'
 
-type FlexProps = {
+type DividerProps = {
   children?: ReactNode
-} & JSX.IntrinsicElements['div']
+} & JSX.IntrinsicElements['hr']
 
-export function Flex({ children, ...props }: FlexProps) {
+export function Divider({ children, ...props }: DividerProps) {
   return (
-    <div {...props} className="flex">
+    <hr {...props} className="divider">
       {children}
-    </div>
+    </hr>
   )
 }

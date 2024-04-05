@@ -5,12 +5,11 @@ import type { JSX, ReactNode } from 'react'
 
 type BoxProps = {
   children?: ReactNode
-  size?: 'xs' | 'md' | 'lg'
 } & JSX.IntrinsicElements['div']
 
-export function Box({ children, size, ...props }: BoxProps) {
+export function Box({ children, ...props }: BoxProps) {
   return (
-    <div {...props} className="box" data-size={size}>
+    <div {...props} className="box">
       {children}
     </div>
   )

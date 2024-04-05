@@ -1,0 +1,144 @@
+import { Ratio } from "@/primals"
+
+# Ratio
+
+The Ratio component is a utility component that allows you to maintain a specific aspect ratio for a container. This is particularly useful when you want to ensure that the width and height of a container are proportional, such as for responsive image or video containers. The aspect ratio is controlled via a prop, allowing for flexible and reusable layout designs.
+
+```jsx
+<Ratio ratio={16 / 9}>
+  <img src="https://via.placeholder.com/1920x1080" alt="Placeholder" className="object-cover h-full" />
+</Ratio>
+```
+
+## Props
+
+| Prop            | Type                                                                                                                                                           | Description                                         |
+|:----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------|
+| backgroundColor | string                                                                                                                                                         | The background color of the Ratio component.        |
+| bg              | string                                                                                                                                                         | The background color of the Ratio component.        |
+| children        | ReactNode                                                                                                                                                      | The content of the Ratio component.                 |
+| h               | string                                                                                                                                                         | The height of the Ratio component.                  |
+| height          | string                                                                                                                                                         | The height of the Ratio component.                  |
+| m               | number                                                                                                                                                         | The margin around the Ratio component.              |
+| margin          | number                                                                                                                                                         | The margin around the Ratio component.              |
+| mb              | number                                                                                                                                                         | The bottom margin of the Ratio component.           |
+| ml              | number                                                                                                                                                         | The left margin of the Ratio component.             |
+| mr              | number                                                                                                                                                         | The right margin of the Ratio component.            |
+| mt              | number                                                                                                                                                         | The top margin of the Ratio component.              |
+| mx              | number                                                                                                                                                         | The horizontal margin of the Ratio component.       |
+| my              | number                                                                                                                                                         | The vertical margin of the Ratio component.         |
+| p               | number                                                                                                                                                         | The padding around the Ratio component.             |
+| padding         | number                                                                                                                                                         | The padding around the Ratio component.             |
+| pb              | number                                                                                                                                                         | The bottom padding of the Ratio component.          |
+| pl              | number                                                                                                                                                         | The left padding of the Ratio component.            |
+| pr              | number                                                                                                                                                         | The right padding of the Ratio component.           |
+| pt              | number                                                                                                                                                         | The top padding of the Ratio component.             |
+| px              | number                                                                                                                                                         | The horizontal padding of the Ratio component.      |
+| py              | number                                                                                                                                                         | The vertical padding of the Ratio component.        |
+| radius          | number                                                                                                                                                         | The border radius of the Ratio component.           |
+| ratio           | number    \| phone \| fullscreen \| widescreen \| golden \| ultrawide \| half \| third ... twelfth \| half-y \| third-y ... twelfth-y \| portrait \| landscape | The aspect ratio of the Ratio component.            |
+| ratioX          | number                                                                                                                                                         | The horizontal aspect ratio of the Ratio component. |
+| ratioY          | number                                                                                                                                                         | The vertical aspect ratio of the Ratio component.   |
+| w               | string                                                                                                                                                         | The width of the Ratio component.                   |
+| width           | string                                                                                                                                                         | The width of the Ratio component.                   |
+
+## Examples
+
+Any of the examples below can be done either with the `ratio` prop or with the `ratioX` and `ratioY` props.
+
+### Square 1/1 Ratio
+
+<Ratio>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Phone 6/13 Ratio
+
+<Ratio ratio={6 / 13}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Fullscreen 4/3 Ratio
+
+<Ratio ratio={4 / 3}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Widescreen 16/9 Ratio
+
+<Ratio ratio={16 / 9}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Golden 16/10 Ratio
+
+<Ratio ratio={16 / 10}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Ultrawide 21/9 Ratio
+
+<Ratio ratio={21 / 9}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Half 1/2 Ratio
+
+<Ratio ratio={1 / 2}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Third 1/3 Ratio
+
+<Ratio ratio={1 / 3}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Twelfth 1/12 Ratio
+
+<Ratio ratio={1 / 12}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Half-y 2/1 Ratio
+
+<Ratio ratio="half-y">
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Third-y 3/1 Ratio
+
+<Ratio ratio="third-y">
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Twelfth-y 12/1 Ratio
+
+<Ratio ratio="twelfth-y">
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Portrait 3/4 Ratio
+
+<Ratio ratio="portrait">
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Landscape 4/3 Ratio
+
+<Ratio ratio="landscape">
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Custom 3/2 Ratio
+
+<Ratio ratioX={3} ratioY={2}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+
+### Custom 2/3 Ratio
+
+<Ratio ratioX={2} ratioY={3}>
+  <img src="https://picsum.photos/1920/1080" alt="Placeholder" className="object-cover h-full!" />
+</Ratio>
+

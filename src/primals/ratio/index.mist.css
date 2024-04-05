@@ -1,18 +1,60 @@
 @scope(.ratio) {
     div:scope {
-        --ratio-x: 1;
-        --ratio-y: 1;
+        --ratioX: 1;
+        --ratioY: 1;
+        --ratio: var(--ratioX) / var(--ratioY);
 
-        aspect-ratio: var(--ratio-x) / var(--ratio-y);
+        --radius: var(--radius-sm);
+        --bg: var(--color-neutrals-0);
+        --background-color: var(--bg);
+        --w: auto;
+        --h: auto;
+        --width: var(--w);
+        --height: var(--h);
+        --p: var(--spacing-0);
+        --pt: var(--p);
+        --pr: var(--p);
+        --pb: var(--p);
+        --pl: var(--p);
+        --px: var(--pl) var(--pr);
+        --py: var(--pt) var(--pb);
+        --padding: var(--py) var(--px);
+        --m: var(--spacing-0);
+        --mt: var(--m);
+        --mb: var(--m);
+        --mr: var(--m);
+        --ml: var(--m);
+        --mx: var(--ml) var(--mr);
+        --my: var(--mt) var(--mb);
+        --margin: var(--my) var(--mx);
+
+        aspect-ratio: var(--ratio);
+        background-color: var(--background-color);
+        width: var(--width);
+        height: var(--height);
+        padding: var(--padding);
+        padding-block: var(--py);
+        padding-inline: var(--px);
+        margin: var(--margin);
+        margin-block: var(--my);
+        margin-inline: var(--mx);
+        border-radius: var(--radius);
+        position: relative;
 
         &[data-ratio="6/13"], &[data-ratio="phone"] {
             --ratio-x: 6;
             --ratio-y: 13;
         }
 
-        &[data-ratio="4/3"], &[data-ratio="fullscreen"] {
+        &[data-ratio="4/3"], &[data-ratio="fullscreen"], &[data-ratio="landscape"], &[data-ratio="horizontal"] {
             --ratio-x: 4;
             --ratio-y: 3;
+        }
+
+
+        &[data-ratio="3/4"], &[data-ratio="portrait"], &[data-ratio="vertical"], &[data-ratio="tall"] {
+            --ratio-x: 3;
+            --ratio-y: 4;
         }
 
         &[data-ratio="16/9"], &[data-ratio="widescreen"] {
@@ -138,21 +180,6 @@
         &[data-ratio="12/1"], &[data-ratio="twelfth-y"] {
             --ratio-x: 12;
             --ratio-y: 1;
-        }
-
-        &[data-ratio="1/1"], &[data-ratio="square"] {
-            --ratio-x: 1;
-            --ratio-y: 1;
-        }
-
-        &[data-ratio="2/3"], &[data-ratio="portrait"] {
-            --ratio-x: 2;
-            --ratio-y: 3;
-        }
-
-        &[data-ratio="3/2"], &[data-ratio="landscape"] {
-            --ratio-x: 3;
-            --ratio-y: 2;
         }
     }
 }

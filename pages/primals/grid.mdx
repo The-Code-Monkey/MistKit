@@ -1,13 +1,15 @@
-import { Box } from '@/primals';
+import { Grid, Cell } from '@/primals';
 
-# Box
+# Grid
 
-The `Box` component is a primitive component that can be used to create a box with padding using the size prop (more to come).
+The `Grid` component is a layout component that allows you to create a grid layout. It is a wrapper around the CSS Grid layout system.
 
 ```jsx
-  <Box size="(xs|md|lg)">
-    <Text color="white">Hello, world!</Text>
-  </Box>
+  <Grid>
+    <Cell>1</Cell>
+    <Cell>2</Cell>
+    <Cell>3</Cell>
+  </Grid>
 ```
 
 ## Props
@@ -32,16 +34,34 @@ The `Box` component is a primitive component that can be used to create a box wi
 | py       | number \| string | The vertical padding of the Box container.   |
 | width    | number \| string | The width of the Box container.              |
 
-
 ## Examples
 
-### md
-<Box size="md" style={{ background: 'red' }}>
-  Hello world
-</Box>
+### Grid With Gap and Columns
 
+<Grid gap={2} columns="1fr 2fr 3fr">
+  <Cell bg="var(--colors-red-300)">1</Cell>
+  <Cell bg="var(--colors-green-300)">2</Cell>
+  <Cell bg="var(--colors-blue-200)">3</Cell>
+</Grid>
 
-### lg
-<Box size="lg" style={{ background: 'green' }}>
-  Hello world
-</Box>
+### Grid With Gap and Rows
+
+<Grid gap={2} rows="1fr 2fr 3fr">
+  <Cell bg="var(--colors-red-300)">1</Cell>
+  <Cell bg="var(--colors-green-300)">2</Cell>
+  <Cell bg="var(--colors-blue-200)">3</Cell>
+</Grid>
+
+### Grid With Gap and Columns and Rows
+
+<Grid gap={2} columns="1fr 2fr 3fr" rows="1fr 2fr 3fr">
+  <Cell bg="var(--colors-red-300)">1</Cell>
+  <Cell bg="var(--colors-green-300)">2</Cell>
+  <Cell bg="var(--colors-blue-200)">3</Cell>
+  <Cell bg="var(--colors-red-300)">4</Cell>
+  <Cell bg="var(--colors-green-300)">5</Cell>
+  <Cell bg="var(--colors-blue-200)">6</Cell>
+  <Cell bg="var(--colors-red-300)">7</Cell>
+  <Cell bg="var(--colors-green-300)">8</Cell>
+  <Cell bg="var(--colors-blue-200)">9</Cell>
+</Grid>

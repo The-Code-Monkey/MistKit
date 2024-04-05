@@ -23,7 +23,7 @@
     "sonar/function-return-type": "off",
     "react/no-multi-comp": "off",
     "import/exports-last": "off",
-    "import/no-unused-modules": ["error", { "missingExports": true, "unusedExports": true, "ignoreExports": ["pages/**/*.tsx"] }],
+    "import/no-unused-modules": ["error", { "missingExports": true, "unusedExports": true, "ignoreExports": ["pages/**/*.tsx", "pages/**/_meta.json"] }],
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/prefer-function-type": "off",
     "max-statements": "off",

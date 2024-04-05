@@ -30,6 +30,8 @@
     --neutrals-24: oklch(4% var(--neutrals-base));
     --neutrals-25: oklch(2% var(--neutrals-base));
     --neutrals-26: oklch(0% var(--neutrals-base));
+
+    --spacing-full: 100%;
 }
 
 @media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {

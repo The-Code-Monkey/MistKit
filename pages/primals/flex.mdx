@@ -1,0 +1,225 @@
+import { Flex, Button } from "@/primals"
+
+# Flex
+
+The `Flex` component is a wrapper around the flex logic.
+
+```jsx
+<Flex>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+```
+
+## Props
+
+| Prop         | Type                                                               | Description                                                                                                         |
+|:-------------|:-------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| align        | "baseline" \| "center" \| "end" \| "start" \| "stretch"            | Aligns flex items along the cross axis of the current line of the flex container.                                   |
+| alignContent | "around" \| "between" \| "center" \| "end" \| "start" \| "stretch" | Aligns a flex container's lines within the flex container when there is extra space in the cross-axis.              |
+| children     | ReactNode                                                          | The content of the Flex component.                                                                                  |
+| dir          | "col-reverse" \| "col" \| "row-reverse" \| "row"                   | The direction of the flex items.                                                                                    |
+| direction    | "col-reverse" \| "col" \| "row-reverse" \| "row"                   | The direction of the flex items.                                                                                    |
+| gap          | number \| string                                                   | The size of the gap between flex items.                                                                             |
+| gapX         | number \| string                                                   | The size of the horizontal gap between flex items.                                                                  |
+| gapY         | number \| string                                                   | The size of the vertical gap between flex items.                                                                    |
+| height       | number \| string                                                   | The height of the Flex container.                                                                                   |
+| justify      | "around" \| "between" \| "center" \| "end" \| "start"              | Defines how the browser distributes space between and around content items along the main-axis of a flex container. |
+| m            | number \| string                                                   | The margin around the Flex container.                                                                               |
+| mb           | number \| string                                                   | The bottom margin of the Flex container.                                                                            |
+| ml           | number \| string                                                   | The left margin of the Flex container.                                                                              |
+| mr           | number \| string                                                   | The right margin of the Flex container.                                                                             |
+| mt           | number \| string                                                   | The top margin of the Flex container.                                                                               |
+| mx           | number \| string                                                   | The horizontal margin of the Flex container.                                                                        |
+| my           | number \| string                                                   | The vertical margin of the Flex container.                                                                          |
+| p            | number \| string                                                   | The padding around the Flex container.                                                                              |
+| pb           | number \| string                                                   | The bottom padding of the Flex container.                                                                           |
+| pl           | number \| string                                                   | The left padding of the Flex container.                                                                             |
+| pr           | number \| string                                                   | The right padding of the Flex container.                                                                            |
+| pt           | number \| string                                                   | The top padding of the Flex container.                                                                              |
+| px           | number \| string                                                   | The horizontal padding of the Flex container.                                                                       |
+| py           | number \| string                                                   | The vertical padding of the Flex container.                                                                         |
+| width        | number \| string                                                   | The width of the Flex container.                                                                                    |
+| wrap         | "nowrap" \| "wrap-reverse" \| "wrap"                               | Specifies whether flex items are forced onto one line or can wrap onto multiple lines.                              |
+
+
+## Examples
+
+### Column
+
+#### Column with gap
+<Flex gap={2}>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+---
+
+#### Column with align items
+
+##### Start
+<Flex items='start'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### End
+<Flex items='end'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### Center
+<Flex items='center'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+#### Column with justify content
+
+##### Start
+
+<Flex justify='start'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### End
+
+<Flex justify='end'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### Center
+
+<Flex justify='center'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+#### Column with align content
+
+##### Start
+
+<Flex content='start'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### End
+
+<Flex content='end'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### Center
+
+<Flex content='center'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+### Row
+
+#### Row with gap
+
+<Flex direction='row' gap={2}>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+---
+
+#### Row with align items
+
+##### Start
+
+<Flex direction='row' items='start'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### End
+
+<Flex direction='row' items='end'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### Center
+
+<Flex direction='row' items='center'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+#### Row with justify content
+
+##### Start
+
+<Flex direction='row' justify='start'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### End
+
+<Flex direction='row' justify='end'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### Center
+
+<Flex direction='row' justify='center'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+#### Row with align content
+
+##### Start
+
+<Flex direction='row' content='start'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### End
+
+<Flex direction='row' content='end'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+##### Center
+
+<Flex direction='row' content='center'>
+  <Button>item 1</Button>
+  <Button>item 2</Button>
+  <Button>item 3</Button>
+</Flex>
+
+

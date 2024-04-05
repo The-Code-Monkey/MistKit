@@ -1,11 +1,9 @@
-@scope(.box) {
-    div:scope {
-        --bg: var(--color-neutrals-0);
-        --background-color: var(--bg);
-        --w: unset;
-        --h: unset;
-        --width: var(--w);
-        --height: var(--h);
+@scope (.divider) {
+    hr:scope {
+        --color: var(--color-neutrals-26);
+        --size: 3px;
+        --style: solid;
+        --width: auto;
         --p: var(--spacing-0);
         --pt: var(--p);
         --pr: var(--p);
@@ -23,14 +21,29 @@
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
 
-        width: var(--width);
-        height: var(--height);
         padding: var(--padding);
         padding-block: var(--py);
         padding-inline: var(--px);
         margin: var(--margin);
         margin-block: var(--my);
         margin-inline: var(--mx);
-        background-color: var(--background-color);
+
+        display: block;
+        unicode-bidi: isolate;
+        /*margin-block-start: 0.5em;*/
+        /*margin-block-end: 0.5em;*/
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        overflow: hidden;
+        height: unset;
+
+        color: var(--color);
+        /*background-color: var(--color);*/
+        border-color: var(--color);
+        border-style: var(--style);
+        border-width: var(--size);
+        border-bottom: 0;
+        border-left: 0;
+        width: var(--width);
     }
 }

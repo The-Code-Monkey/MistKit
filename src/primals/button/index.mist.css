@@ -1,29 +1,55 @@
 @scope (.button) {
     button:scope {
-        --size: var(--font-size-base);
+        --font-size: var(--font-size-base);
         --radius: var(--radius-sm);
-        --bg: var(--color-neutrals-0);
         --color: var(--color-text);
         --border: 1px solid var(--color-neutrals-8);
-        --paddingX: var(--spacing-4);
-        --paddingY: var(--spacing-2);
-        --padding: var(--paddingY) var(--paddingX);
         --shadow: var(--shadow-sm);
         --transitionFunction: var(--default-transition-duration);
         --transitionTiming: var(--default-transition-timing-function);
         --transitionProperties: color, background-color;
 
+        --bg: var(--color-neutrals-0);
+        --background-color: var(--bg);
+        --w: unset;
+        --h: unset;
+        --width: var(--w);
+        --height: var(--h);
+        --p: var(--spacing-0);
+        --px: var(--spacing-4);
+        --py: var(--spacing-2);
+        --pt: var(--py);
+        --pr: var(--px);
+        --pb: var(--py);
+        --pl: var(--px);
+        --padding: var(--pt) var(--pr) var(--pb) var(--pl);
+        --m: var(--spacing-0);
+        --mx: var(--m);
+        --my: var(--m);
+        --mt: var(--my);
+        --mr: var(--mx);
+        --mb: var(--my);
+        --ml: var(--mx);
+        --margin: var(--mt) var(--mr) var(--mb) var(--ml);
+
         /* Default style */
-        font-size: var(--size);
+        font-size: var(--font-size);
         border-radius: var(--radius);
-        background-color: var(--bg);
+        background-color: var(--background-color);
         color: var(--color);
         border: var(--border);
         padding: var(--padding);
+        padding-block: var(--py);
+        padding-inline: var(--px);
+        margin: var(--margin);
+        margin-block: var(--my);
+        margin-inline: var(--mx);
         box-shadow: var(--shadow);
         transition-property: var(--transitionProperties);
         transition-timing-function: var(--transitionFunction);
         transition-duration: var(--transitionTiming);
+        width: var(--width);
+        height: var(--height);
 
         &:hover {
             background-color: var(--color-neutrals-6);

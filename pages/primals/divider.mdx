@@ -1,0 +1,61 @@
+import { Divider, Flex, Box } from "@/primals"
+
+# Divider
+
+The `Divider` component is a horizontal line that separates content.
+
+```
+<Divider />
+```
+
+## Props
+
+| Prop  | Type             | Description                                      |
+|:------|:-----------------|:-------------------------------------------------|
+| m     | number \| string | The margin around the Divider container.         |
+| mb    | number \| string | The bottom margin of the Divider container.      |
+| ml    | number \| string | The left margin of the Divider container.        |
+| mr    | number \| string | The right margin of the Divider container.       |
+| mt    | number \| string | The top margin of the Divider container.         |
+| mx    | number \| string | The horizontal margin of the Divider container.  |
+| my    | number \| string | The vertical margin of the Divider container.    |
+| p     | number \| string | The padding around the Divider container.        |
+| pb    | number \| string | The bottom padding of the Divider container.     |
+| pl    | number \| string | The left padding of the Divider container.       |
+| pr    | number \| string | The right padding of the Divider container.      |
+| pt    | number \| string | The top padding of the Divider container.        |
+| px    | number \| string | The horizontal padding of the Divider container. |
+| py    | number \| string | The vertical padding of the Divider container.   |
+| width | number \| string | The width of the Divider container.              |
+| color | string           | The color of the Divider.                        |
+| style | string           | The style of the Divider.                        |
+| size  | string           | The size of the Divider.                         |
+
+
+## Examples
+
+### Default
+
+<Divider />
+
+### Vertical
+
+To make a vertical divider you need to wrap it in a flex element and as long as there is height to the flex element it will create a vertical divider.
+
+<br />
+<Flex style={{ flexDirection: 'row' }}>
+  <Box style={{ height: '100px', flex: 1 }}>&nbsp;</Box>
+  <Divider />
+  <Box style={{ height: '100px', flex: 1 }}>&nbsp;</Box>
+</Flex>
+<br />
+
+This is the code for the above example
+
+```jsx
+<Flex style={{ flexDirection: 'row' }}>
+  <Box style={{ height: '100px', flex: 1 }}>&nbsp;</Box>
+  <Divider />
+  <Box style={{ height: '100px', flex: 1 }}>&nbsp;</Box>
+</Flex>
+```

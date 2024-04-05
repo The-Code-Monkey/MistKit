@@ -5,6 +5,16 @@
     "react": "18.2.0",
     "tailwindcss": "4.0.0-alpha.11"
   },
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/esm/index.js"
+    }
+  },
+  "style": "./dist/esm/main.css",
+  "typings": "dist/types/index.d.ts",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
