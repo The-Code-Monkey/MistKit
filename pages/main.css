@@ -354,13 +354,9 @@
     --width-6xl: 72rem;
     --width-7xl: 80rem;
     --width-prose: 65ch;
-    --font-family-sans: ui-sans-serif, system-ui, sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-      "Noto Color Emoji";
-    --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times,
-      serif;
-    --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
+    --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --font-size-xs: 0.75rem;
     --font-size-xs--line-height: 1rem;
     --font-size-sm: 0.875rem;
@@ -416,6 +412,97 @@
     --transition-timing-function-in: cubic-bezier(0.4, 0, 1, 1);
     --transition-timing-function-out: cubic-bezier(0, 0, 0.2, 1);
     --transition-timing-function-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --radius-none: 0;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-weight-light: 300;
+    --font-weight-thin: 100;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+    --font-style-normal: normal;
+    --font-style-italic: italic;
+    --text-align-left: left;
+    --text-align-center: center;
+    --text-align-right: right;
+    --text-transform-none: none;
+    --text-transform-uppercase: uppercase;
+    --text-transform-lowercase: lowercase;
+    --text-transform-capitalize: capitalize;
+    --white-space-normal: normal;
+    --white-space-nowrap: nowrap;
+    --white-space-pre: pre;
+    --white-space-pre-line: pre-line;
+    --white-space-pre-wrap: pre-wrap;
+    --word-break-normal: normal;
+    --word-break-break-all: break-all;
+    --word-break-keep-all: keep-all;
+    --word-wrap-normal: normal;
+    --word-wrap-break-word: break-word;
+    --overflow-wrap: break-word;
+    --overflow-wrap-normal: normal;
+    --overflow-wrap-break-word: break-word;
+    --hyphens-none: none;
+    --hyphens-manual: manual;
+    --hyphens-auto: auto;
+    --text-orientation-mixed: mixed;
+    --text-orientation-upright: upright;
+    --text-orientation-sideways: sideways;
+    --text-rendering-auto: auto;
+    --text-rendering-optimizeSpeed: optimizeSpeed;
+    --text-rendering-optimizeLegibility: optimizeLegibility;
+    --text-rendering-geometricPrecision: geometricPrecision;
+    --text-size-adjust-auto: auto;
+    --text-size-adjust-none: none;
+    --text-underline-position-auto: auto;
+    --text-underline-position-under: under;
+    --text-underline-offset-auto: auto;
+    --text-underline-offset-fromFont: fromFont;
+    --text-underline-offset-fromText: fromText;
+    --text-underline-style-solid: solid;
+    --text-underline-style-double: double;
+    --text-underline-style-dotted: dotted;
+    --text-underline-style-dashed: dashed;
+    --text-underline-style-wavy: wavy;
+    --text-underline-color-currentColor: currentColor;
+    --text-overline-style-solid: solid;
+    --text-overline-style-double: double;
+    --text-overline-style-dotted: dotted;
+    --text-overline-style-dashed: dashed;
+    --text-overline-style-wavy: wavy;
+    --text-overline-color-currentColor: currentColor;
+    --text-line-through-style-solid: solid;
+    --text-line-through-style-double: double;
+    --text-line-through-style-dotted: dotted;
+    --text-line-through-style-dashed: dashed;
+    --text-line-through-style-wavy: wavy;
+    --text-line-through-color-currentColor: currentColor;
+    --text-decoration-line-none: none;
+    --text-decoration-line-underline: underline;
+    --text-decoration-line-overline: overline;
+    --text-decoration-line-line-through: line-through;
+    --text-decoration-style-solid: solid;
+    --text-decoration-style-double: double;
+    --text-decoration-style-dotted: dotted;
+    --text-decoration-style-dashed: dashed;
+    --text-decoration-style-wavy: wavy;
+    --text-decoration-color-currentColor: currentColor;
+    --text-overflow-clip: clip;
+    --text-overflow-ellipsis: ellipsis;
+    --text-overflow-visible: visible;
+    --text-justify-auto: auto;
+    --text-justify-interWord: inter-word;
+    --text-justify-interCharacter: inter-character;
+    --text-indent-none: 0;
+    --text-justify-trim-auto: auto;
+    --text-justify-trim-compact: compact;
+    --text-align-last-auto: auto;
+    --text-align-last-left: left;
+    --text-align-last-right: right;
+    --text-shadow-none: none;
+    --text-underline-width: 1px;
+    --text-overline-width: 1px;
+    --text-line-through-width: 1px;
+    --text-decoration-width: 1px;
     --color-text: #000000;
     --color-text-inverse: #ffffff;
     --color-danger: #ff0000;
@@ -457,10 +544,11 @@
     --color-neutrals-24: var(--neutrals-24);
     --color-neutrals-25: var(--neutrals-25);
     --color-neutrals-26: var(--neutrals-26);
+    --animate-mixin: mixin 1s paused;
   }
 }
 @layer base {
-  *, ::after, ::before, ::backdrop, ::first-letter, ::file-selector-button {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -586,14 +674,14 @@
   .collapse {
     visibility: collapse;
   }
+  .visible {
+    visibility: visible;
+  }
   .relative {
     position: relative;
   }
   .static {
     position: static;
-  }
-  .sticky {
-    position: sticky;
   }
   .block {
     display: block;
@@ -619,6 +707,9 @@
   .table {
     display: table;
   }
+  .table\/index {
+    display: table;
+  }
   .h-full {
     height: 100%;
   }
@@ -638,6 +729,27 @@
   .object-cover {
     object-fit: cover;
   }
+  .text-justify {
+    text-align: justify;
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .lowercase {
+    text-transform: lowercase;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .line-through {
+    text-decoration-line: line-through;
+  }
+  .overline {
+    text-decoration-line: overline;
+  }
   .underline {
     text-decoration-line: underline;
   }
@@ -656,6 +768,9 @@
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+  }
+  .break-all {
+    word-break: break-all;
   }
 }
 @layer theme, base, components, utilities;
@@ -757,6 +872,41 @@
   50% {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@keyframes mixin {
+  from, to {
+    --bg: var(--color-neutrals-0);
+    --background-color: var(--bg);
+    --w: unset;
+    --h: unset;
+    --width: var(--w);
+    --height: var(--h);
+    --p: var(--spacing-0);
+    --pt: var(--p);
+    --pr: var(--p);
+    --pb: var(--p);
+    --pl: var(--p);
+    --px: var(--pl) var(--pr);
+    --py: var(--pt) var(--pb);
+    --padding: var(--py) var(--px);
+    --m: var(--spacing-0);
+    --mt: var(--m);
+    --mb: var(--m);
+    --mr: var(--m);
+    --ml: var(--m);
+    --mx: var(--ml) var(--mr);
+    --my: var(--mt) var(--mb);
+    --margin: var(--my) var(--mx);
+    width: var(--width);
+    height: var(--height);
+    padding: var(--padding);
+    padding-block: var(--py);
+    padding-inline: var(--px);
+    margin: var(--margin);
+    margin-block: var(--my);
+    margin-inline: var(--mx);
+    background-color: var(--background-color);
   }
 }
 @property --tw-rotate-x {

@@ -1,0 +1,301 @@
+@scope (.table) {
+    table:scope {
+        /* Global Props */
+        --radius: var(--radius-none);
+        --bg: var(--color-neutrals-0);
+        --background-color: var(--bg);
+        --w: unset;
+        --h: unset;
+        --width: var(--w);
+        --height: var(--h);
+        --p: var(--spacing-0);
+        --pt: var(--p);
+        --pr: var(--p);
+        --pb: var(--p);
+        --pl: var(--p);
+        --px: var(--pl) var(--pr);
+        --py: var(--pt) var(--pb);
+        --padding: var(--py) var(--px);
+        --m: var(--spacing-0);
+        --mt: var(--m);
+        --mb: var(--m);
+        --mr: var(--m);
+        --ml: var(--m);
+        --mx: var(--ml) var(--mr);
+        --my: var(--mt) var(--mb);
+        --margin: var(--my) var(--mx);
+
+        /* Global Props Assigned */
+        border-radius: var(--radius);
+        width: var(--width);
+        height: var(--height);
+        padding: var(--padding);
+        padding-block: var(--py);
+        padding-inline: var(--px);
+        margin: var(--margin);
+        margin-block: var(--my);
+        margin-inline: var(--mx);
+        background-color: var(--background-color);
+
+        /* Table Props */
+        --border-collapse: collapse;
+
+        /* Table Props Assigned */
+        border-collapse: var(--border-collapse);
+    }
+}
+
+@scope (.thead) {
+    thead:scope {
+        /* Global Props */
+        --radius: var(--radius-none);
+        --bg: var(--color-neutrals-0);
+        --background-color: var(--bg);
+        --w: unset;
+        --h: unset;
+        --width: var(--w);
+        --height: var(--h);
+        --p: var(--spacing-0);
+        --pt: var(--p);
+        --pr: var(--p);
+        --pb: var(--p);
+        --pl: var(--p);
+        --px: var(--pl) var(--pr);
+        --py: var(--pt) var(--pb);
+        --padding: var(--py) var(--px);
+        --m: var(--spacing-0);
+        --mt: var(--m);
+        --mb: var(--m);
+        --mr: var(--m);
+        --ml: var(--m);
+        --mx: var(--ml) var(--mr);
+        --my: var(--mt) var(--mb);
+        --margin: var(--my) var(--mx);
+
+        /* Global Props Assigned */
+        border-radius: var(--radius);
+        width: var(--width);
+        height: var(--height);
+        padding: var(--padding);
+        padding-block: var(--py);
+        padding-inline: var(--px);
+        margin: var(--margin);
+        margin-block: var(--my);
+        margin-inline: var(--mx);
+        background-color: var(--background-color);
+
+        /* Table Head Props */
+        --border-bottom: 1px solid var(--color-neutrals-3);
+
+        /* Table Head Props Assigned */
+        border-bottom: var(--border-bottom);
+    }
+}
+
+@scope (.th) {
+    th:scope {
+        /* Global Props */
+        --radius: var(--radius-none);
+        --bg: var(--color-neutrals-0);
+        --background-color: var(--bg);
+        --w: unset;
+        --h: unset;
+        --width: var(--w);
+        --height: var(--h);
+        --p: var(--spacing-0);
+        --pt: var(--p);
+        --pr: var(--p);
+        --pb: var(--p);
+        --pl: var(--p);
+        --px: var(--pl) var(--pr);
+        --py: var(--pt) var(--pb);
+        --padding: var(--py) var(--px);
+        --m: var(--spacing-0);
+        --mt: var(--m);
+        --mb: var(--m);
+        --mr: var(--m);
+        --ml: var(--m);
+        --mx: var(--ml) var(--mr);
+        --my: var(--mt) var(--mb);
+        --margin: var(--my) var(--mx);
+
+        /* Global Props Assigned */
+        border-radius: var(--radius);
+        width: var(--width);
+        height: var(--height);
+        padding: var(--padding);
+        padding-block: var(--py);
+        padding-inline: var(--px);
+        margin: var(--margin);
+        margin-block: var(--my);
+        margin-inline: var(--mx);
+        background-color: var(--background-color);
+    }
+}
+
+@scope (.tbody) {
+    tbody:scope {
+        /* Global Props */
+        --radius: var(--radius-none);
+        --bg: var(--color-neutrals-0);
+        --background-color: var(--bg);
+        --w: unset;
+        --h: unset;
+        --width: var(--w);
+        --height: var(--h);
+        --p: var(--spacing-0);
+        --pt: var(--p);
+        --pr: var(--p);
+        --pb: var(--p);
+        --pl: var(--p);
+        --px: var(--pl) var(--pr);
+        --py: var(--pt) var(--pb);
+        --padding: var(--py) var(--px);
+        --m: var(--spacing-0);
+        --mt: var(--m);
+        --mb: var(--m);
+        --mr: var(--m);
+        --ml: var(--m);
+        --mx: var(--ml) var(--mr);
+        --my: var(--mt) var(--mb);
+        --margin: var(--my) var(--mx);
+
+        /* Global Props Assigned */
+        border-radius: var(--radius);
+        width: var(--width);
+        height: var(--height);
+        padding: var(--padding);
+        padding-block: var(--py);
+        padding-inline: var(--px);
+        margin: var(--margin);
+        margin-block: var(--my);
+        margin-inline: var(--mx);
+        background-color: var(--background-color);
+    }
+}
+
+@scope (.td) {
+    td:scope {
+        /* Global Props */
+        --radius: var(--radius-none);
+        --bg: var(--color-neutrals-0);
+        --background-color: var(--bg);
+        --w: unset;
+        --h: unset;
+        --width: var(--w);
+        --height: var(--h);
+        --p: var(--spacing-0);
+        --pt: var(--p);
+        --pr: var(--p);
+        --pb: var(--p);
+        --pl: var(--p);
+        --px: var(--pl) var(--pr);
+        --py: var(--pt) var(--pb);
+        --padding: var(--py) var(--px);
+        --m: var(--spacing-0);
+        --mt: var(--m);
+        --mb: var(--m);
+        --mr: var(--m);
+        --ml: var(--m);
+        --mx: var(--ml) var(--mr);
+        --my: var(--mt) var(--mb);
+        --margin: var(--my) var(--mx);
+
+        /* Global Props Assigned */
+        border-radius: var(--radius);
+        width: var(--width);
+        height: var(--height);
+        padding: var(--padding);
+        padding-block: var(--py);
+        padding-inline: var(--px);
+        margin: var(--margin);
+        margin-block: var(--my);
+        margin-inline: var(--mx);
+        background-color: var(--background-color);
+    }
+}
+
+@scope (.tr) {
+    tr:scope {
+        /* Global Props */
+        --radius: var(--radius-none);
+        --bg: var(--color-neutrals-0);
+        --background-color: var(--bg);
+        --w: unset;
+        --h: unset;
+        --width: var(--w);
+        --height: var(--h);
+        --p: var(--spacing-0);
+        --pt: var(--p);
+        --pr: var(--p);
+        --pb: var(--p);
+        --pl: var(--p);
+        --px: var(--pl) var(--pr);
+        --py: var(--pt) var(--pb);
+        --padding: var(--py) var(--px);
+        --m: var(--spacing-0);
+        --mt: var(--m);
+        --mb: var(--m);
+        --mr: var(--m);
+        --ml: var(--m);
+        --mx: var(--ml) var(--mr);
+        --my: var(--mt) var(--mb);
+        --margin: var(--my) var(--mx);
+
+        /* Global Props Assigned */
+        border-radius: var(--radius);
+        width: var(--width);
+        height: var(--height);
+        padding: var(--padding);
+        padding-block: var(--py);
+        padding-inline: var(--px);
+        margin: var(--margin);
+        margin-block: var(--my);
+        margin-inline: var(--mx);
+        background-color: var(--background-color);
+    }
+}
+
+
+@scope (.tfoot)
+{
+tfoot:scope {
+    /* Global Props */
+    --radius:           var(--radius-none);
+    --bg:               var(--color-neutrals-0);
+    --background-color: var(--bg);
+    --w:                unset;
+    --h:                unset;
+    --width:            var(--w);
+    --height:           var(--h);
+    --p:                var(--spacing-0);
+    --pt:               var(--p);
+    --pr:               var(--p);
+    --pb:               var(--p);
+    --pl:               var(--p);
+    --px:               var(--pl) var(--pr);
+    --py:               var(--pt) var(--pb);
+    --padding:          var(--py) var(--px);
+    --m:                var(--spacing-0);
+    --mt:               var(--m);
+    --mb:               var(--m);
+    --mr:               var(--m);
+    --ml:               var(--m);
+    --mx:               var(--ml) var(--mr);
+    --my:               var(--mt) var(--mb);
+    --margin:           var(--my) var(--mx);
+
+    /* Global Props Assigned */
+    border-radius:      var(--radius);
+    width:              var(--width);
+    height:             var(--height);
+    padding:            var(--padding);
+    padding-block:      var(--py);
+    padding-inline:     var(--px);
+    margin:             var(--margin);
+    margin-block:       var(--my);
+    margin-inline:      var(--mx);
+    background-color:   var(--background-color);
+}
+
+}

@@ -1,9 +1,6 @@
-@scope(.box) {
-    div:scope {
+@scope (.spacer) {
+    br:scope {
         /* Global Props */
-        --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
-        --background-color: var(--bg);
         --w: unset;
         --h: unset;
         --width: var(--w);
@@ -26,7 +23,6 @@
         --margin: var(--my) var(--mx);
 
         /* Global Props Assigned */
-        border-radius: var(--radius);
         width: var(--width);
         height: var(--height);
         padding: var(--padding);
@@ -35,6 +31,5 @@
         margin: var(--margin);
         margin-block: var(--my);
         margin-inline: var(--mx);
-        background-color: var(--background-color);
     }
 }

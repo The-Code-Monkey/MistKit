@@ -1,5 +1,5 @@
-@scope(.box) {
-    div:scope {
+@scope (.link) {
+    a:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -36,5 +36,19 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+
+        /* Link Props */
+        --text-decoration: none;
+
+        /* Link Props Assigned */
+        text-decoration: var(--text-decoration);
+
+        &:hover {
+            --color: var(--color-info);
+        }
+
+        &:visited {
+            --color: var(--color-info-hover);
+        }
     }
 }

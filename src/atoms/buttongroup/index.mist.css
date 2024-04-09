@@ -1,7 +1,42 @@
 @scope (.button-group) {
     div:scope {
         button {
-            background-color: var(--color-neutrals-0);
+            /* Global Props */
+            --radius: var(--radius-none);
+            --bg: var(--color-neutrals-0);
+            --background-color: var(--bg);
+            --w: unset;
+            --h: unset;
+            --width: var(--w);
+            --height: var(--h);
+            --p: var(--spacing-0);
+            --pt: var(--p);
+            --pr: var(--p);
+            --pb: var(--p);
+            --pl: var(--p);
+            --px: var(--pl) var(--pr);
+            --py: var(--pt) var(--pb);
+            --padding: var(--py) var(--px);
+            --m: var(--spacing-0);
+            --mt: var(--m);
+            --mb: var(--m);
+            --mr: var(--m);
+            --ml: var(--m);
+            --mx: var(--ml) var(--mr);
+            --my: var(--mt) var(--mb);
+            --margin: var(--my) var(--mx);
+
+            /* Global Props Assigned */
+            border-radius: var(--radius);
+            width: var(--width);
+            height: var(--height);
+            padding: var(--padding);
+            padding-block: var(--py);
+            padding-inline: var(--px);
+            margin: var(--margin);
+            margin-block: var(--my);
+            margin-inline: var(--mx);
+            background-color: var(--variant, var(--background-color));
 
             &:first-of-type {
                 border-top-left-radius: var(--radius-md);
@@ -26,9 +61,8 @@
             }
 
             &[data-variant="danger"] {
-                background-color: var(--color-danger);
+                --variant: var(--color-danger);
                 color: var(--color-white);
-                /*@apply bg-danger-default text-white dark:bg-danger-dark dark:text-white hover:bg-danger-hover;*/
 
                 &:hover {
                     background-color: var(--color-danger-hover);
@@ -36,9 +70,8 @@
             }
 
             &[data-variant="info"] {
-                background-color: var(--color-info);
+                --variant: var(--color-info);
                 color: var(--color-white);
-                /*@apply bg-info-default text-white dark:bg-info-dark dark:text-white hover:bg-info-hover;*/
 
                 &:hover {
                     background-color: var(--color-info-hover);
@@ -46,9 +79,8 @@
             }
 
             &[data-variant="success"] {
-                background-color: var(--color-success);
+                --variant: var(--color-success);
                 color: var(--color-white);
-                /*@apply bg-success-default text-white dark:bg-success-dark dark:text-white hover:bg-success-hover;*/
 
                 &:hover {
                     background-color: var(--color-success-hover);
@@ -56,9 +88,8 @@
             }
 
             &[data-variant="warning"] {
-                background-color: var(--color-warning);
+                --variant: var(--color-warning);
                 color: var(--color-white);
-                /*@apply bg-warning-default text-white dark:bg-warning-dark dark:text-white hover:bg-warning-hover;*/
 
                 &:hover {
                     background-color: var(--color-warning-hover);

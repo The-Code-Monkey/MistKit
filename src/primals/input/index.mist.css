@@ -1,14 +1,14 @@
-@scope(.box) {
-    div:scope {
+@scope (.input) {
+    input:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
-        --w: unset;
-        --h: unset;
+        --w: var(--spacing-full);
+        --h: var(--spacing-14);
         --width: var(--w);
         --height: var(--h);
-        --p: var(--spacing-0);
+        --p: var(--spacing-2);
         --pt: var(--p);
         --pr: var(--p);
         --pb: var(--p);
@@ -24,6 +24,7 @@
         --mx: var(--ml) var(--mr);
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
+        --border-color: var(--color-neutrals-3);
 
         /* Global Props Assigned */
         border-radius: var(--radius);
@@ -36,5 +37,15 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+        border: 1px solid var(--border-color);
+
+        &[data-error] {
+            --border-color: var(--color-danger);
+        }
+
+        &[data-disabled] {
+            --bg: var(--color-neutrals-2);
+            cursor: not-allowed;
+        }
     }
 }

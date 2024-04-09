@@ -1,14 +1,16 @@
 @scope(.ratio) {
     div:scope {
+        /* Component Specific Props */
         --ratioX: 1;
         --ratioY: 1;
         --ratio: var(--ratioX) / var(--ratioY);
 
-        --radius: var(--radius-sm);
+        /* Global Props */
+        --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
-        --w: auto;
-        --h: auto;
+        --w: var(--spacing-full);
+        --h: var(--spacing-full);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
@@ -28,7 +30,13 @@
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
 
+        /* Default Styles */
+        position: relative;
+
+        /* Component Specific Props Assigned */
         aspect-ratio: var(--ratio);
+
+        /* Global Props Assigned */
         background-color: var(--background-color);
         width: var(--width);
         height: var(--height);
@@ -39,7 +47,6 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         border-radius: var(--radius);
-        position: relative;
 
         &[data-ratio="6/13"], &[data-ratio="phone"] {
             --ratio-x: 6;

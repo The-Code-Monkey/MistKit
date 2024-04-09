@@ -1,14 +1,15 @@
 @scope (.button) {
     button:scope {
-        --font-size: var(--font-size-base);
-        --radius: var(--radius-sm);
-        --color: var(--color-text);
-        --border: 1px solid var(--color-neutrals-8);
+        /* Component Specific Props */
+        --border-color: var(--color-neutrals-8);
+        --border: 1px solid var(--border-color);
         --shadow: var(--shadow-sm);
         --transitionFunction: var(--default-transition-duration);
         --transitionTiming: var(--default-transition-timing-function);
         --transitionProperties: color, background-color;
 
+        /* Global Props */
+        --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
         --w: unset;
@@ -16,94 +17,88 @@
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
-        --px: var(--spacing-4);
-        --py: var(--spacing-2);
-        --pt: var(--py);
-        --pr: var(--px);
-        --pb: var(--py);
-        --pl: var(--px);
-        --padding: var(--pt) var(--pr) var(--pb) var(--pl);
+        --pt: var(--p);
+        --pr: var(--p);
+        --pb: var(--p);
+        --pl: var(--p);
+        --px: var(--pl) var(--pr);
+        --py: var(--pt) var(--pb);
+        --padding: var(--py) var(--px);
         --m: var(--spacing-0);
-        --mx: var(--m);
-        --my: var(--m);
-        --mt: var(--my);
-        --mr: var(--mx);
-        --mb: var(--my);
-        --ml: var(--mx);
-        --margin: var(--mt) var(--mr) var(--mb) var(--ml);
+        --mt: var(--m);
+        --mb: var(--m);
+        --mr: var(--m);
+        --ml: var(--m);
+        --mx: var(--ml) var(--mr);
+        --my: var(--mt) var(--mb);
+        --margin: var(--my) var(--mx);
 
-        /* Default style */
-        font-size: var(--font-size);
+        /* Component Specific Props Assigned */
+        border: var(--border);
+        box-shadow: var(--shadow);
+        transition-property: var(--transitionProperties);
+        transition-timing-function: var(--transitionFunction);
+        transition-duration: var(--transitionTiming);
+
+        /* Global Props Assigned */
         border-radius: var(--radius);
         background-color: var(--background-color);
-        color: var(--color);
-        border: var(--border);
         padding: var(--padding);
         padding-block: var(--py);
         padding-inline: var(--px);
         margin: var(--margin);
         margin-block: var(--my);
         margin-inline: var(--mx);
-        box-shadow: var(--shadow);
-        transition-property: var(--transitionProperties);
-        transition-timing-function: var(--transitionFunction);
-        transition-duration: var(--transitionTiming);
         width: var(--width);
         height: var(--height);
 
         &:hover {
-            background-color: var(--color-neutrals-6);
-            border-color: var(--color-neutrals-10);
+            --bg: var(--color-neutrals-6);
+            --border-color: var(--color-neutrals-10);
             color: var(--color-text)
         }
 
-        /*@apply text-base rounded-sm bg-neutrals-0 dark:bg-neutrals-26 hover:bg-neutrals-4 dark:hover:bg-neutrals-22 text-neutrals-10 dark:text-neutrals-0 dark:hover:text-neutrals-0 px-4 py-2 border border-neutrals-8 shadow-sm transition-colors duration-200 ease-in-out;*/
-
         &[data-variant='danger'] {
-            background-color: var(--color-danger);
-            border-color: var(--color-danger);
+            --bg: var(--color-danger);
+            --border-color: var(--color-danger);
             color: var(--color-danger-text);
-            /*@apply bg-danger-default text-white dark:bg-danger-dark dark:text-white hover:bg-danger-hover;*/
 
             &:hover {
-                background-color: var(--color-danger-hover);
-                border-color: var(--color-danger-hover);
+                --bg: var(--color-danger-hover);
+                --border-color: var(--color-danger-hover);
             }
         }
 
         &[data-variant='info'] {
-            background-color: var(--color-info);
-            border-color: var(--color-info);
+            --bg: var(--color-info);
+            --border-color: var(--color-info);
             color: var(--color-info-text);
-            /*@apply bg-info-default text-white dark:bg-info-dark dark:text-white hover:bg-info-hover;*/
 
             &:hover {
-                background-color: var(--color-info-hover);
-                border-color: var(--color-info-hover);
+                --bg: var(--color-info-hover);
+                --border-color: var(--color-info-hover);
             }
         }
 
         &[data-variant='success'] {
-            background-color: var(--color-success);
-            border-color: var(--color-success);
+            --bg: var(--color-success);
+            --border-color: var(--color-success);
             color: var(--color-success-text);
-            /*@apply bg-success-default text-white dark:bg-success-dark dark:text-white hover:bg-success-hover;*/
 
             &:hover {
-                background-color: var(--color-success-hover);
-                border-color: var(--color-success-hover);
+                --bg: var(--color-success-hover);
+                --border-color: var(--color-success-hover);
             }
         }
 
         &[data-variant='warning'] {
-            background-color: var(--color-warning);
-            border-color: var(--color-warning);
+            --bg: var(--color-warning);
+            --border-color: var(--color-warning);
             color: var(--color-warning-text);
-            /*@apply bg-warning-default text-white dark:bg-warning-dark dark:text-white hover:bg-warning-hover;*/
 
             &:hover {
-                background-color: var(--color-warning-hover);
-                border-color: var(--color-warning-hover);
+                --bg: var(--color-warning-hover);
+                --border-color: var(--color-warning-hover);
             }
         }
     }

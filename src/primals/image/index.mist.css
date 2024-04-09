@@ -1,11 +1,17 @@
-@scope(.box) {
-    div:scope {
+@scope (.image) {
+    img:scope {
+        /* Component Specific Props */
+        --top: var(--spacing-0);
+        --left: var(--spacing-0);
+        --position: absolute;
+        --fit: cover;
+
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
-        --w: unset;
-        --h: unset;
+        --w: var(--spacing-full);
+        --h: var(--spacing-full);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
@@ -36,5 +42,19 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+
+        /* Component Specific Props Assigned */
+        position: var(--position);
+        top: var(--top);
+        left: var(--left);
+        object-fit: var(--fit);
+
+        &[data-fit="contain"] {
+            --fit: contain;
+        }
+
+        &[data-fit="fill"] {
+            --fit: fill;
+        }
     }
 }

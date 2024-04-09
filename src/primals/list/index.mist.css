@@ -1,9 +1,5 @@
-@scope (.cell) {
-    div:scope {
-        /* Component Specific Props */
-        --cell-columns: 1;
-        --cell-rows: 1;
-
+@scope (.unordered-list) {
+    ul:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -29,12 +25,8 @@
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
 
-        /* Component Specific Props Assigned */
-        grid-column: span var(--cell-columns);
-        grid-row: span var(--cell-rows);
-
         /* Global Props Assigned */
-        background-color: var(--background-color);
+        border-radius: var(--radius);
         width: var(--width);
         height: var(--height);
         padding: var(--padding);
@@ -43,20 +35,21 @@
         margin: var(--margin);
         margin-block: var(--my);
         margin-inline: var(--mx);
-        border-radius: var(--radius);
+        background-color: var(--background-color);
+
+        /* List Props */
+        --list-style-type: circle;
+        --list-style-position: inside;
+        --list-style-image: none;
+        --list-style: var(--list-style-type) var(--list-style-position) var(--list-style-image);
+
+        /* List Props Assigned */
+        list-style: var(--list-style);
     }
 }
 
-@scope (.grid) {
-    div:scope {
-        /* Component Specific Props */
-        --grid-columns: 12;
-        --grid-rows: auto;
-        --gap: var(--spacing-2);
-        --gapX: var(--gap);
-        --gapY: var(--gap);
-        --cell-size: 1fr;
-
+@scope (.ordered-list) {
+    ol:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -82,17 +75,8 @@
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
 
-        /* Default Styles */
-        display: grid;
-
-        /* Component Specific Props Assigned */
-        grid-template-columns: repeat(var(--grid-columns), var(--cell-size));
-        grid-template-rows: var(--grid-rows);
-        grid-gap: var(--gapY) var(--gapX);
-        gap: var(--gapY) var(--gapX);
-
         /* Global Props Assigned */
-        background-color: var(--background-color);
+        border-radius: var(--radius);
         width: var(--width);
         height: var(--height);
         padding: var(--padding);
@@ -101,6 +85,56 @@
         margin: var(--margin);
         margin-block: var(--my);
         margin-inline: var(--mx);
+        background-color: var(--background-color);
+
+        /* List Props */
+        --list-style-type: decimal;
+        --list-style-position: inside;
+        --list-style-image: none;
+        --list-style: var(--list-style-type) var(--list-style-position) var(--list-style-image);
+
+        /* List Props Assigned */
+        list-style: var(--list-style);
+    }
+}
+
+@scope (.list-item) {
+    li:scope {
+        /* Global Props */
+        --radius: var(--radius-none);
+        --bg: var(--color-neutrals-0);
+        --background-color: var(--bg);
+        --w: unset;
+        --h: unset;
+        --width: var(--w);
+        --height: var(--h);
+        --p: var(--spacing-0);
+        --pt: var(--p);
+        --pr: var(--p);
+        --pb: var(--p);
+        --pl: var(--p);
+        --px: var(--pl) var(--pr);
+        --py: var(--pt) var(--pb);
+        --padding: var(--py) var(--px);
+        --m: var(--spacing-0);
+        --mt: var(--m);
+        --mb: var(--m);
+        --mr: var(--m);
+        --ml: var(--m);
+        --mx: var(--ml) var(--mr);
+        --my: var(--mt) var(--mb);
+        --margin: var(--my) var(--mx);
+
+        /* Global Props Assigned */
         border-radius: var(--radius);
+        width: var(--width);
+        height: var(--height);
+        padding: var(--padding);
+        padding-block: var(--py);
+        padding-inline: var(--px);
+        margin: var(--margin);
+        margin-block: var(--my);
+        margin-inline: var(--mx);
+        background-color: var(--background-color);
     }
 }
