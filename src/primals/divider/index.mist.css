@@ -9,8 +9,8 @@
         /* Global Props */
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
-        --w: unset;
-        --h: unset;
+        --w: var(--spacing-auto);
+        --h: var(--spacing-auto);
         --p: var(--spacing-0);
         --pt: var(--p);
         --pr: var(--p);

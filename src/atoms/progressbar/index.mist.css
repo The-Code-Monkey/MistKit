@@ -1,4 +1,4 @@
-@scope(.box) {
+@scope (.progressBar) {
     div:scope {
         /* Global Props */
         --radius: var(--radius-none);
@@ -8,7 +8,7 @@
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
-        --p: var(--spacing-2);
+        --p: var(--spacing-0);
         --pt: var(--p);
         --pr: var(--p);
         --pb: var(--p);
@@ -37,12 +37,25 @@
         margin-inline: var(--mx);
         background-color: var(--background-color);
 
-        &[data-size="sm"] {
-            --p: var(--spacing-1);
+        /* Specific Props */
+        --progress: 0;
+        --progress-color: var(--color-progress);
+        --progress-start: 0;
+        --progress-end: var(--progress);
+
+        /* Specific Props Assigned */
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: var(--progress-start);
+            width: var(--progress-end);
+            height: 100%;
+            background-color: var(--progress-color);
         }
 
-        &[data-size="lg"] {
-            --p: var(--spacing-4);
-        }
     }
 }

@@ -1,11 +1,11 @@
-@scope (.unordered-list) {
-    ul:scope {
+@scope (.accordion) {
+    details:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
-        --w: var(--spacing-auto);
-        --h: var(--spacing-auto);
+        --w: var(--spacing-full);
+        --h: var(--spacing-8);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
@@ -37,25 +37,31 @@
         margin-inline: var(--mx);
         background-color: var(--background-color);
 
-        /* List Props */
-        --list-style-type: circle;
-        --list-style-position: inside;
-        --list-style-image: none;
-        --list-style: var(--list-style-type) var(--list-style-position) var(--list-style-image);
+        /* Default Styles */
+        display: flex;
+        cursor: pointer;
+        justify-items: center;
+        transition: all 0.7s ease-in-out;
 
-        /* List Props Assigned */
-        list-style: var(--list-style);
+        &[open] .summary:after {
+            transform: rotate(90deg);
+        }
+
+        &[open] .content {
+            max-height: 400px;
+            transition: all 0.8s ease-in-out;
+        }
     }
 }
 
-@scope (.ordered-list) {
-    ol:scope {
+@scope (.summary) {
+    summary:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
-        --w: var(--spacing-auto);
-        --h: var(--spacing-auto);
+        --w: unset;
+        --h: var(--spacing-full);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
@@ -87,19 +93,28 @@
         margin-inline: var(--mx);
         background-color: var(--background-color);
 
-        /* List Props */
-        --list-style-type: decimal;
-        --list-style-position: inside;
-        --list-style-image: none;
-        --list-style: var(--list-style-type) var(--list-style-position) var(--list-style-image);
+        /* Component Specific Props */
+        --gap: var(--spacing-2);
 
-        /* List Props Assigned */
-        list-style: var(--list-style);
+        /* Default Styles */
+        display: flex;
+        justify-items: center;
+        overflow: hidden;
+
+        /* Component Specific Props Assigned */
+        gap: var(--gap);
+
+
+        &:after {
+            margin-left: auto;
+            transition: transform 0.7s ease-in-out;
+            content: '▶';
+        }
     }
 }
 
-@scope (.list-item) {
-    li:scope {
+@scope (.content) {
+    div:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -136,5 +151,10 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+
+        /* Default Styles */
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
     }
 }

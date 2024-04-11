@@ -28,6 +28,7 @@
     "import/no-unused-modules": ["error", { "missingExports": true, "unusedExports": true, "ignoreExports": ["pages/**/*.tsx", "pages/**/_meta.json"] }],
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/prefer-function-type": "off",
+    "@typescript-eslint/consistent-type-assertions": "off",
     "max-statements": "off",
     "react/jsx-props-no-spreading": "off",
     // These are required
@@ -73,6 +74,18 @@
 
       "rules": {
         "max-lines": ["error", 500]
+      }
+    },
+    {
+      "files": ["*.mist.tsx"],
+      "rules": {
+        "id-length": "off",
+        "sonarjs/cognitive-complexity": "off",
+        "max-lines": "off",
+        "@typescript-eslint/prefer-nullish-coalescing": "off",
+        "unicorn/prevent-abbreviations": "off",
+        "jsx-a11y/alt-text": "off",
+        "react/jsx-no-target-blank": "off"
       }
     }
   ]

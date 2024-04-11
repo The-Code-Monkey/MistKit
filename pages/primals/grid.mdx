@@ -38,30 +38,30 @@ The `Grid` component is a layout component that allows you to create a grid layo
 
 ### Grid With Gap and Columns
 
-<Grid gap={2} columns="1fr 2fr 3fr">
-  <Cell bg="var(--colors-red-300)">1</Cell>
-  <Cell bg="var(--colors-green-300)">2</Cell>
-  <Cell bg="var(--colors-blue-200)">3</Cell>
+<Grid columns="3">
+  <Cell bg="red-800">1</Cell>
+  <Cell bg="green-800">2</Cell>
+  <Cell bg="blue-800">3</Cell>
 </Grid>
 
 ### Grid With Gap and Rows
 
-<Grid gap={2} rows="1fr 2fr 3fr">
-  <Cell bg="var(--colors-red-300)">1</Cell>
-  <Cell bg="var(--colors-green-300)">2</Cell>
-  <Cell bg="var(--colors-blue-200)">3</Cell>
+<Grid rows="2" columns="1">
+  <Cell bg="red-800">1</Cell>
+  <Cell bg="green-800">2</Cell>
+  <Cell bg="blue-800">3</Cell>
 </Grid>
 
 ### Grid With Gap and Columns and Rows
 
-<Grid gap={2} columns="1fr 2fr 3fr" rows="1fr 2fr 3fr">
-  <Cell bg="var(--colors-red-300)">1</Cell>
-  <Cell bg="var(--colors-green-300)">2</Cell>
-  <Cell bg="var(--colors-blue-200)">3</Cell>
-  <Cell bg="var(--colors-red-300)">4</Cell>
-  <Cell bg="var(--colors-green-300)">5</Cell>
-  <Cell bg="var(--colors-blue-200)">6</Cell>
-  <Cell bg="var(--colors-red-300)">7</Cell>
-  <Cell bg="var(--colors-green-300)">8</Cell>
-  <Cell bg="var(--colors-blue-200)">9</Cell>
+<Grid columns="3" rows="3" >
+  <Cell bg="red-800">1</Cell>
+  <Cell bg="green-800">2</Cell>
+  <Cell bg="blue-800">3</Cell>
+  <Cell bg="red-800">4</Cell>
+  <Cell bg="green-800">5</Cell>
+  <Cell bg="blue-800">6</Cell>
+  <Cell bg="red-800">7</Cell>
+  <Cell bg="green-800">8</Cell>
+  <Cell bg="blue-800">9</Cell>
 </Grid>

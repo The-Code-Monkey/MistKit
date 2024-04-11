@@ -1,9 +1,5 @@
-@scope (.cell) {
-    div:scope {
-        /* Component Specific Props */
-        --cell-columns: 1;
-        --cell-rows: 1;
-
+@scope (.breadcrumb) {
+    ul:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -29,12 +25,8 @@
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
 
-        /* Component Specific Props Assigned */
-        grid-column: span var(--cell-columns);
-        grid-row: span var(--cell-rows);
-
         /* Global Props Assigned */
-        background-color: var(--background-color);
+        border-radius: var(--radius);
         width: var(--width);
         height: var(--height);
         padding: var(--padding);
@@ -43,20 +35,31 @@
         margin: var(--margin);
         margin-block: var(--my);
         margin-inline: var(--mx);
-        border-radius: var(--radius);
+        background-color: var(--background-color);
+
+        /* Default Styles */
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+
+        /* Specific Props */
+        --separator: '/';
+        --separator-gap: var(--spacing-2);
+
+        .breadcrumbItem {
+            &:not(:last-child) {
+                &:after {
+                    content: var(--separator);
+                    margin: 0 var(--separator-gap);
+                }
+            }
+        }
+
     }
 }
 
-@scope (.grid) {
-    div:scope {
-        /* Component Specific Props */
-        --columns: 12;
-        --rows: auto;
-        --gap: var(--spacing-2);
-        --gapX: var(--gap);
-        --gapY: var(--gap);
-        --cell-size: 1fr;
-
+@scope (.breadcrumbItem) {
+    li:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -82,17 +85,8 @@
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
 
-        /* Default Styles */
-        display: grid;
-
-        /* Component Specific Props Assigned */
-        grid-template-columns: repeat(var(--columns), var(--cell-size));
-        grid-template-rows: var(--rows);
-        grid-gap: var(--gapY) var(--gapX);
-        gap: var(--gapY) var(--gapX);
-
         /* Global Props Assigned */
-        background-color: var(--background-color);
+        border-radius: var(--radius);
         width: var(--width);
         height: var(--height);
         padding: var(--padding);
@@ -101,6 +95,9 @@
         margin: var(--margin);
         margin-block: var(--my);
         margin-inline: var(--mx);
-        border-radius: var(--radius);
+        background-color: var(--background-color);
+
+        /* Default Styles */
+        display: inline-block;
     }
 }

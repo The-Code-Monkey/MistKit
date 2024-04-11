@@ -16,7 +16,7 @@
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-readable-tailwind": "1.2.5",
     "husky": "9.0.11",
-    "mistcss": "0.3.8",
+    "@techstack/mistcss-test": "0.4.2",
     "nextra": "2.13.4",
     "nextra-theme-docs": "2.13.4",
     "tailwindcss": "4.0.0-alpha.13",

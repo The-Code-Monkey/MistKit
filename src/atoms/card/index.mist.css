@@ -1,5 +1,5 @@
-@scope (.table) {
-    table:scope {
+@scope (.card) {
+    div:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -37,63 +37,33 @@
         margin-inline: var(--mx);
         background-color: var(--background-color);
 
-        /* Table Props */
-        --border-collapse: collapse;
+        /* Card Specific Props */
+        --shadow: var(--shadow-md);
+        --border-color: var(--color-neutrals-4);
+        --border-width: var(--spacing-1);
+        --border-style: solid;
+        --border: var(--border-width) var(--border-style) var(--border-color);
+        --border-top: var(--border);
+        --border-right: var(--border);
+        --border-bottom: var(--border);
+        --border-left: var(--border);
 
-        /* Table Props Assigned */
-        border-collapse: var(--border-collapse);
-    }
-}
-
-@scope (.thead) {
-    thead:scope {
-        /* Global Props */
-        --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
-        --background-color: var(--bg);
-        --w: var(--spacing-auto);
-        --h: var(--spacing-auto);
-        --width: var(--w);
-        --height: var(--h);
-        --p: var(--spacing-0);
-        --pt: var(--p);
-        --pr: var(--p);
-        --pb: var(--p);
-        --pl: var(--p);
-        --px: var(--pl) var(--pr);
-        --py: var(--pt) var(--pb);
-        --padding: var(--py) var(--px);
-        --m: var(--spacing-0);
-        --mt: var(--m);
-        --mb: var(--m);
-        --mr: var(--m);
-        --ml: var(--m);
-        --mx: var(--ml) var(--mr);
-        --my: var(--mt) var(--mb);
-        --margin: var(--my) var(--mx);
-
-        /* Global Props Assigned */
-        border-radius: var(--radius);
-        width: var(--width);
-        height: var(--height);
-        padding: var(--padding);
-        padding-block: var(--py);
-        padding-inline: var(--px);
-        margin: var(--margin);
-        margin-block: var(--my);
-        margin-inline: var(--mx);
-        background-color: var(--background-color);
-
-        /* Table Head Props */
-        --border-bottom: 1px solid var(--color-neutrals-3);
-
-        /* Table Head Props Assigned */
+        /* Card Specific Props Assigned */
+        box-shadow: var(--shadow);
+        border-top: var(--border-top);
+        border-right: var(--border-right);
         border-bottom: var(--border-bottom);
+        border-left: var(--border-left);
+
+        /* Default Styles */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 }
 
-@scope (.th) {
-    th:scope {
+@scope (.cardHeader) {
+    header:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -130,11 +100,27 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+
+        /* CardHeader Specific Props */
+        --border-color: var(--color-neutrals-4);
+        --border-width: var(--spacing-1);
+        --border-style: solid;
+        --border: var(--border-width) var(--border-style) var(--border-color);
+        --border-top: none;
+        --border-right: none;
+        --border-bottom: var(--border);
+        --border-left: none;
+
+        /* CardHeader Specific Props Assigned */
+        border-top: var(--border-top);
+        border-right: var(--border-right);
+        border-bottom: var(--border-bottom);
+        border-left: var(--border-left);
     }
 }
 
-@scope (.tbody) {
-    tbody:scope {
+@scope (.cardFooter) {
+    footer:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -171,11 +157,31 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+
+        /* CardFooter Specific Props */
+        --border-color: var(--color-neutrals-4);
+        --border-width: var(--spacing-1);
+        --border-style: solid;
+        --border: var(--border-width) var(--border-style) var(--border-color);
+        --border-top: var(--border);
+        --border-right: none;
+        --border-bottom: none;
+        --border-left: none;
+
+        /* CardFooter Specific Props Assigned */
+        border-top: var(--border-top);
+        border-right: var(--border-right);
+        border-bottom: var(--border-bottom);
+        border-left: var(--border-left);
+
+        /* Default Styles */
+        display: flex;
+        justify-content: space-between;
     }
 }
 
-@scope (.td) {
-    td:scope {
+@scope (.cardBody) {
+    div:scope {
         /* Global Props */
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
@@ -212,90 +218,8 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+
+        /* Default Styles */
+        flex: 1;
     }
-}
-
-@scope (.tr) {
-    tr:scope {
-        /* Global Props */
-        --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
-        --background-color: var(--bg);
-        --w: var(--spacing-auto);
-        --h: var(--spacing-auto);
-        --width: var(--w);
-        --height: var(--h);
-        --p: var(--spacing-0);
-        --pt: var(--p);
-        --pr: var(--p);
-        --pb: var(--p);
-        --pl: var(--p);
-        --px: var(--pl) var(--pr);
-        --py: var(--pt) var(--pb);
-        --padding: var(--py) var(--px);
-        --m: var(--spacing-0);
-        --mt: var(--m);
-        --mb: var(--m);
-        --mr: var(--m);
-        --ml: var(--m);
-        --mx: var(--ml) var(--mr);
-        --my: var(--mt) var(--mb);
-        --margin: var(--my) var(--mx);
-
-        /* Global Props Assigned */
-        border-radius: var(--radius);
-        width: var(--width);
-        height: var(--height);
-        padding: var(--padding);
-        padding-block: var(--py);
-        padding-inline: var(--px);
-        margin: var(--margin);
-        margin-block: var(--my);
-        margin-inline: var(--mx);
-        background-color: var(--background-color);
-    }
-}
-
-
-@scope (.tfoot)
-{
-tfoot:scope {
-    /* Global Props */
-    --radius:           var(--radius-none);
-    --bg:               var(--color-neutrals-0);
-    --background-color: var(--bg);
-    --w:                unset;
-    --h:                unset;
-    --width:            var(--w);
-    --height:           var(--h);
-    --p:                var(--spacing-0);
-    --pt:               var(--p);
-    --pr:               var(--p);
-    --pb:               var(--p);
-    --pl:               var(--p);
-    --px:               var(--pl) var(--pr);
-    --py:               var(--pt) var(--pb);
-    --padding:          var(--py) var(--px);
-    --m:                var(--spacing-0);
-    --mt:               var(--m);
-    --mb:               var(--m);
-    --mr:               var(--m);
-    --ml:               var(--m);
-    --mx:               var(--ml) var(--mr);
-    --my:               var(--mt) var(--mb);
-    --margin:           var(--my) var(--mx);
-
-    /* Global Props Assigned */
-    border-radius:      var(--radius);
-    width:              var(--width);
-    height:             var(--height);
-    padding:            var(--padding);
-    padding-block:      var(--py);
-    padding-inline:     var(--px);
-    margin:             var(--margin);
-    margin-block:       var(--my);
-    margin-inline:      var(--mx);
-    background-color:   var(--background-color);
-}
-
 }

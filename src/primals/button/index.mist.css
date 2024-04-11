@@ -9,14 +9,14 @@
         --transitionProperties: color, background-color;
 
         /* Global Props */
-        --radius: var(--radius-none);
+        --radius: var(--radius-md);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
-        --w: unset;
-        --h: unset;
+        --w: var(--spacing-auto);
+        --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
-        --p: var(--spacing-0);
+        --p: var(--spacing-2);
         --pt: var(--p);
         --pr: var(--p);
         --pb: var(--p);
@@ -56,6 +56,14 @@
             --bg: var(--color-neutrals-6);
             --border-color: var(--color-neutrals-10);
             color: var(--color-text)
+        }
+
+        &[data-size="sm"] {
+            --p: var(--spacing-1);
+        }
+
+        &[data-size="lg"] {
+            --p: var(--spacing-4);
         }
 
         &[data-variant='danger'] {

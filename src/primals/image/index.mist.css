@@ -4,7 +4,7 @@
         --top: var(--spacing-0);
         --left: var(--spacing-0);
         --position: absolute;
-        --fit: cover;
+        --object-fit: cover;
 
         /* Global Props */
         --radius: var(--radius-none);
@@ -47,14 +47,14 @@
         position: var(--position);
         top: var(--top);
         left: var(--left);
-        object-fit: var(--fit);
+        object-fit: var(--object-fit);
 
         &[data-fit="contain"] {
-            --fit: contain;
+            --object-fit: contain;
         }
 
         &[data-fit="fill"] {
-            --fit: fill;
+            --object-fit: fill;
         }
     }
 }

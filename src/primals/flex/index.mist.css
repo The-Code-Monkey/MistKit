@@ -16,8 +16,8 @@
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
-        --w: unset;
-        --h: unset;
+        --w: var(--spacing-auto);
+        --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);

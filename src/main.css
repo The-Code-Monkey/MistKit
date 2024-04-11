@@ -32,6 +32,7 @@
     --neutrals-26: oklch(0% var(--neutrals-base));
 
     --spacing-full: 100%;
+    --spacing-auto: auto;
 }
 
 @media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
@@ -80,6 +81,10 @@
 }
 
 @theme {
+    --dir-row: row;
+    --dir-row-reverse: row-reverse;
+    --dir-column: column;
+    --dir-column-reverse: column-reverse;
     --radius-none: 0;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
@@ -178,17 +183,18 @@
     --color-text: #000000;
     --color-text-inverse: #ffffff;
     --color-danger: #ff0000;
-    --color-danger-text: var(--color-text-inverse);
+    --color-danger-text: var(--color-text);
     --color-success: #00ff00;
-    --color-success-text: var(--color-text-inverse);
+    --color-success-text: var(--color-text);
     --color-warning: #ffff00;
-    --color-warning-text: var(--color-text-inverse);
+    --color-warning-text: var(--color-text);
     --color-info: #0000ff;
     --color-info-text: var(--color-text-inverse);
     --color-danger-hover: #d70000;
     --color-success-hover: #00e606;
     --color-warning-hover: #fadd05;
     --color-info-hover: #0609bf;
+    --color-progress: #007bff;
 
     --color-neutrals-0: var(--neutrals-0);
     --color-neutrals-1: var(--neutrals-1);

@@ -2,6 +2,7 @@
   "index": "Intro",
   "box": "Box",
   "button": "Button",
+  "divider": "Divider",
   "flex": "Flex",
   "grid": "Grid",
   "ratio": "Ratio"

@@ -35,7 +35,7 @@ The `Divider` component is a horizontal line that separates content.
 ## Examples
 
 ### Default
-
+<br />
 <Divider />
 
 ### Vertical
@@ -43,19 +43,19 @@ The `Divider` component is a horizontal line that separates content.
 To make a vertical divider you need to wrap it in a flex element and as long as there is height to the flex element it will create a vertical divider.
 
 <br />
-<Flex style={{ flexDirection: 'row' }}>
-  <Box style={{ height: '100px', flex: 1 }}>&nbsp;</Box>
+<Flex direction="row">
+  <Box h="24">&nbsp;</Box>
   <Divider />
-  <Box style={{ height: '100px', flex: 1 }}>&nbsp;</Box>
+  <Box h="24">&nbsp;</Box>
 </Flex>
 <br />
 
 This is the code for the above example
 
 ```jsx
-<Flex style={{ flexDirection: 'row' }}>
-  <Box style={{ height: '100px', flex: 1 }}>&nbsp;</Box>
+<Flex direction="row">
+  <Box h="24">&nbsp;</Box>
   <Divider />
-  <Box style={{ height: '100px', flex: 1 }}>&nbsp;</Box>
+  <Box h="24">&nbsp;</Box>
 </Flex>
 ```

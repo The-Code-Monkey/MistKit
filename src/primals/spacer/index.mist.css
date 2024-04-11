@@ -1,8 +1,8 @@
 @scope (.spacer) {
     br:scope {
         /* Global Props */
-        --w: unset;
-        --h: unset;
+        --w: var(--spacing-auto);
+        --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);

@@ -1,99 +1,23 @@
 @scope (.button-group) {
     div:scope {
-        button {
+        button.button {
             /* Global Props */
-            --radius: var(--radius-none);
-            --bg: var(--color-neutrals-0);
-            --background-color: var(--bg);
-            --w: unset;
-            --h: unset;
-            --width: var(--w);
-            --height: var(--h);
-            --p: var(--spacing-0);
-            --pt: var(--p);
-            --pr: var(--p);
-            --pb: var(--p);
-            --pl: var(--p);
-            --px: var(--pl) var(--pr);
-            --py: var(--pt) var(--pb);
-            --padding: var(--py) var(--px);
-            --m: var(--spacing-0);
-            --mt: var(--m);
-            --mb: var(--m);
-            --mr: var(--m);
-            --ml: var(--m);
-            --mx: var(--ml) var(--mr);
-            --my: var(--mt) var(--mb);
-            --margin: var(--my) var(--mx);
+            --radius:           var(--radius-md);
 
-            /* Global Props Assigned */
-            border-radius: var(--radius);
-            width: var(--width);
-            height: var(--height);
-            padding: var(--padding);
-            padding-block: var(--py);
-            padding-inline: var(--px);
-            margin: var(--margin);
-            margin-block: var(--my);
-            margin-inline: var(--mx);
-            background-color: var(--variant, var(--background-color));
+            border-radius: var(--radius-none);
 
             &:first-of-type {
-                border-top-left-radius: var(--radius-md);
-                border-bottom-left-radius: var(--radius-md);
+                border-top-left-radius: var(--radius);
+                border-bottom-left-radius: var(--radius);
             }
 
             &:last-of-type {
-                border-top-right-radius: var(--radius-md);
-                border-bottom-right-radius: var(--radius-md);
+                border-top-right-radius: var(--radius);
+                border-bottom-right-radius: var(--radius);
             }
 
             &:not(:first-of-type) {
                 margin-left: calc(var(--spacing-px) * -1);
-            }
-
-            &[data-size='lg'] {
-                font-size: var(--font-size-lg);
-            }
-
-            &[data-size='sm'] {
-                font-size: var(--font-size-sm);
-            }
-
-            &[data-variant="danger"] {
-                --variant: var(--color-danger);
-                color: var(--color-white);
-
-                &:hover {
-                    background-color: var(--color-danger-hover);
-                }
-            }
-
-            &[data-variant="info"] {
-                --variant: var(--color-info);
-                color: var(--color-white);
-
-                &:hover {
-                    background-color: var(--color-info-hover);
-                }
-            }
-
-            &[data-variant="success"] {
-                --variant: var(--color-success);
-                color: var(--color-white);
-
-                &:hover {
-                    background-color: var(--color-success-hover);
-                }
-            }
-
-            &[data-variant="warning"] {
-                --variant: var(--color-warning);
-                color: var(--color-white);
-
-                &:hover {
-                    background-color: var(--color-warning-hover);
-                }
             }
         }
     }
