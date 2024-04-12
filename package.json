@@ -1,6 +1,6 @@
 {
   "name": "mist-kit",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
   "exports": {
