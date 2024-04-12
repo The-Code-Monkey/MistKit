@@ -29,7 +29,7 @@
     "build:docs": "next build",
     "build": "bun build:mist && tsc --project tsconfig.build.json",
     "build:copy": "cp ./src/main.css ./dist/esm/main.css && rm -rf package.json && cp ./build.package.json ./package.json",
-    "lint": "eslint ./src/primals ./src/atoms ./pages --fix",
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint ./src/primals ./src/atoms ./pages --fix",
     "prepare": "husky",
     "watch:dev": "next dev",
     "watch:mist": "mistcss --watch ./src",
