@@ -25,7 +25,7 @@
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
 
-        /* Global Props Assigned */
+        /* !* Global Props Assigned *! */
         border-radius: var(--radius);
         width: var(--width);
         height: var(--height);
@@ -37,11 +37,11 @@
         margin-inline: var(--mx);
         background-color: var(--background-color);
 
-        /* Text Props */
-        --font-size: var(--font-size-base);
-        --font-weight: var(--font-weight-normal);
-        --font-style: var(--font-style-normal);
-        --font-family: var(--font-family-sans);
+        /* !* Text Props *! */
+        --font-size: var(--fontSize-base);
+        --font-weight: var(--fontWeight-normal);
+        --font-style: var(--fontStyle-normal);
+        --font-family: var(--fontFamily-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
         --color: var(--color-neutrals-9);
         --text-align: var(--text-align-left);
@@ -77,7 +77,7 @@
         --text-indent: var(--text-indent-none);
         --text-justify-trim: var(--text-justify-trim-auto);
         --text-align-last: var(--text-align-last-auto);
-
+        /*  */
         /* Text Props Assigned */
         font: var(--font);
         color: var(--color);
@@ -160,7 +160,7 @@
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
 
-        /* Global Props Assigned */
+        /* !* Global Props Assigned *! */
         border-radius: var(--radius);
         width: var(--width);
         height: var(--height);
@@ -173,10 +173,10 @@
         background-color: var(--background-color);
 
         /* Text Props */
-        --font-size: var(--font-size-base);
-        --font-weight: var(--font-weight-normal);
-        --font-style: var(--font-style-normal);
-        --font-family: var(--font-family-sans);
+        --font-size: var(--fontSize-base);
+        --font-weight: var(--fontWeight-normal);
+        --font-style: var(--fontStyle-normal);
+        --font-family: var(--fontFamily-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
         --color: var(--color-neutrals-9);
         --text-align: var(--text-align-left);
@@ -292,10 +292,10 @@
         background-color: var(--background-color);
 
         /* Text Props */
-        --font-size: var(--font-size-base);
-        --font-weight: var(--font-weight-normal);
-        --font-style: var(--font-style-normal);
-        --font-family: var(--font-family-sans);
+        --font-size: var(--fontSize-base);
+        --font-weight: var(--fontWeight-normal);
+        --font-style: var(--fontStyle-normal);
+        --font-family: var(--fontFamily-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
         --color: var(--color-neutrals-9);
         --text-align: var(--text-align-left);
@@ -411,10 +411,10 @@
         background-color: var(--background-color);
 
         /* Text Props */
-        --font-size: var(--font-size-base);
-        --font-weight: var(--font-weight-normal);
-        --font-style: var(--font-style-normal);
-        --font-family: var(--font-family-sans);
+        --font-size: var(--fontSize-base);
+        --font-weight: var(--fontWeight-normal);
+        --font-style: var(--fontStyle-normal);
+        --font-family: var(--fontFamily-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
         --color: var(--color-neutrals-9);
         --text-align: var(--text-align-left);
@@ -530,10 +530,10 @@
         background-color: var(--background-color);
 
         /* Text Props */
-        --font-size: var(--font-size-base);
-        --font-weight: var(--font-weight-normal);
-        --font-style: var(--font-style-normal);
-        --font-family: var(--font-family-sans);
+        --font-size: var(--fontSize-base);
+        --font-weight: var(--fontWeight-normal);
+        --font-style: var(--fontStyle-normal);
+        --font-family: var(--fontFamily-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
         --color: var(--color-neutrals-9);
         --text-align: var(--text-align-left);

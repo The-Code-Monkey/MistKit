@@ -522,7 +522,7 @@
     --color-warning-hover: #fadd05;
     --color-info-hover: #0609bf;
     --color-progress: #007bff;
-    --color-disabled: color-mix(in oklch, var(--color-text), var(--color-neutrals-0) 75%);
+    --color-disabled: color-mix(in oklch, var(--color-text), var(--color-neutrals-0) 65%);
     --color-neutrals-0: var(--neutrals-0);
     --color-neutrals-1: var(--neutrals-1);
     --color-neutrals-2: var(--neutrals-2);
@@ -688,6 +688,9 @@
   }
   .static {
     position: static;
+  }
+  .sticky {
+    position: sticky;
   }
   .block {
     display: block;
