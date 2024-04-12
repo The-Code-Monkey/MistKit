@@ -1,6 +1,6 @@
 {
   "name": "mist-kit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "peerDependencies": {
     "react": "18.2.0",
     "tailwindcss": "4.0.0-alpha.13"
