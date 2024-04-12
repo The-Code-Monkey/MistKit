@@ -1,0 +1,46 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
+
+      - run: bun install
+
+      - name: Build Components
+        run: bun build:mist
+
+      - name: Lint
+        run: bun lint
+
+      - name: Build package
+        run: bun run build
+
+      - name: Build Copy
+        run: bun build:copy
+
+      - name: Test
+        run: bun test

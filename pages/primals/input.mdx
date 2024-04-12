@@ -1,0 +1,36 @@
+import { Input } from '@/primals';
+
+# Input
+
+The `Input` component is a simple wrapper around the native `<input>` element. It is used to create text inputs, password inputs, and other types of inputs.
+
+```jsx
+<Input placeholder="Enter your name" name="name" value="test" />
+```
+
+## Props
+
+This takes all the props from the default props table and all the native `<input>` element. In addition to that, it also takes the following props:
+
+| Prop     | Type    | Default | Description                                          |
+|----------|---------|---------|------------------------------------------------------|
+| error    | boolean | false   | If true, the input will be styled as an error input. |
+| disabled | boolean | false   | If true, the input will be disabled.                 |
+
+## Examples
+
+### Text Input
+
+<Input placeholder="Enter your name" name="name" value="test" />
+
+### Password Input
+
+<Input type="password" placeholder="Enter your password" name="password" value="test" />
+
+### Error Input
+
+<Input placeholder="Enter your name" name="name" value="test" error />
+
+### Disabled Input
+
+<Input placeholder="Enter your name" name="name" value="test" disabled />

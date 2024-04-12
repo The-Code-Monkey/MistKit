@@ -5,7 +5,7 @@
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
-        --p: var(--spacing-0);
+        --p: var(--spacing-2);
         --pt: var(--p);
         --pr: var(--p);
         --pb: var(--p);
@@ -22,6 +22,8 @@
         --my: var(--mt) var(--mb);
         --margin: var(--my) var(--mx);
 
+        line-height: 20px;
+
         /* Global Props Assigned */
         width: var(--width);
         height: var(--height);
@@ -31,5 +33,7 @@
         margin: var(--margin);
         margin-block: var(--my);
         margin-inline: var(--mx);
+        content: " ";
+        display: inline-block;
     }
 }

@@ -1,14 +1,14 @@
 @scope (.input) {
     input:scope {
         /* Global Props */
-        --radius: var(--radius-none);
+        --radius: var(--radius-md);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
         --w: var(--spacing-full);
-        --h: var(--spacing-14);
+        --h: var(--spacing-10);
         --width: var(--w);
         --height: var(--h);
-        --p: var(--spacing-2);
+        --p: var(--spacing-3);
         --pt: var(--p);
         --pr: var(--p);
         --pb: var(--p);
@@ -45,7 +45,9 @@
 
         &[data-disabled] {
             --bg: var(--color-neutrals-2);
+            color: var(--color-neutrals-10);
             cursor: not-allowed;
+            pointer-events: none;
         }
     }
 }

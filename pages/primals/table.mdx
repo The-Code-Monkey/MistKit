@@ -1,0 +1,157 @@
+import { Table, Thead, Tbody, Tfoot, Tr, Td, Th } from '@/primals'
+import { Tab } from "nextra/components";
+
+# Table
+
+The `Table` component is a simple table component that wraps the native HTML `<table>` element.
+
+```jsx
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Header 1</Th>
+      <Th>Header 2</Th>
+      <Th>Header 3</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Row 1, Cell 1</Td>
+      <Td>Row 1, Cell 2</Td>
+      <Td>Row 1, Cell 3</Td>
+    </Tr>
+    <Tr>
+      <Td>Row 2, Cell 1</Td>
+      <Td>Row 2, Cell 2</Td>
+      <Td>Row 2, Cell 3</Td>
+    </Tr>
+    <Tr>
+      <Td>Row 3, Cell 1</Td>
+      <Td>Row 3, Cell 2</Td>
+      <Td>Row 3, Cell 3</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Td>Footer 1</Td>
+      <Td>Footer 2</Td>
+      <Td>Footer 3</Td>
+    </Tr>
+  </Tfoot>
+</Table>
+```
+
+## Props
+
+This takes all the props from the default props table and all the native `<table>` element. Plus the following:
+
+| Name           | Type   | Default       | Description                                                                                             |
+|----------------|--------|---------------|---------------------------------------------------------------------------------------------------------|
+| borderCollapse | string | 'collapse'    | The border-collapse CSS property sets whether cells inside a `<table>` have shared or separate borders. |
+| borderStyle    | string | 'solid'       | The border-style CSS property sets the style of the border of a box.                                    |
+| borderColor    | string | 'neutrals-10' | The border-color CSS property sets the color of the border of a box.                                    |
+| borderWidth    | string | '1px'         | The border-width CSS property sets the width of the border of a box.                                    |
+
+# Thead
+
+The `Thead` component is a simple table head component that wraps the native HTML `<thead>` element.
+
+## Props
+
+This takes all the props from the default props table and all the native `<thead>` element. Plus the following:
+
+| Name        | Type   | Default       | Description                                                          |
+|-------------|--------|---------------|----------------------------------------------------------------------|
+| borderStyle | string | 'solid'       | The border-style CSS property sets the style of the border of a box. |
+| borderColor | string | 'neutrals-10' | The border-color CSS property sets the color of the border of a box. |
+| borderWidth | string | '1px'         | The border-width CSS property sets the width of the border of a box. |
+
+# Tbody
+
+The `Tbody` component is a simple table body component that wraps the native HTML `<tbody>` element.
+
+## Props
+
+This takes all the props from the default props table and all the native `<tbody>` element.
+
+# Tfoot
+
+The `Tfoot` component is a simple table foot component that wraps the native HTML `<tfoot>` element.
+
+## Props
+
+This takes all the props from the default props table and all the native `<tfoot>` element.
+
+# Tr
+
+The `Tr` component is a simple table row component that wraps the native HTML `<tr>` element.
+
+## Props
+
+This takes all the props from the default props table and all the native `<tr>` element.
+
+# Td
+
+The `Td` component is a simple table data cell component that wraps the native HTML `<td>` element. Plus the following:
+
+| Name        | Type   | Default       | Description                                                          |
+|-------------|--------|---------------|----------------------------------------------------------------------|
+| borderStyle | string | 'solid'       | The border-style CSS property sets the style of the border of a box. |
+| borderColor | string | 'neutrals-10' | The border-color CSS property sets the color of the border of a box. |
+| borderWidth | string | '1px'         | The border-width CSS property sets the width of the border of a box. |
+
+## Props
+
+This takes all the props from the default props table and all the native `<td>` element.
+
+# Th
+
+The `Th` component is a simple table header cell component that wraps the native HTML `<th>` element. Plus the following:
+
+| Name        | Type   | Default       | Description                                                          |
+|-------------|--------|---------------|----------------------------------------------------------------------|
+| borderStyle | string | 'solid'       | The border-style CSS property sets the style of the border of a box. |
+| borderColor | string | 'neutrals-10' | The border-color CSS property sets the color of the border of a box. |
+| borderWidth | string | '1px'         | The border-width CSS property sets the width of the border of a box. |
+
+## Props
+
+This takes all the props from the default props table and all the native `<th>` element.
+
+# Examples
+
+## Table without border-collapse
+
+<Table>
+  <Thead>
+    <Tr>
+      <Th>Header 1</Th>
+      <Th>Header 2</Th>
+      <Th>Header 3</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>Row 1, Cell 1</Td>
+      <Td>Row 1, Cell 2</Td>
+      <Td>Row 1, Cell 3</Td>
+    </Tr>
+    <Tr>
+      <Td>Row 2, Cell 1</Td>
+      <Td>Row 2, Cell 2</Td>
+      <Td>Row 2, Cell 3</Td>
+    </Tr>
+    <Tr>
+      <Td>Row 3, Cell 1</Td>
+      <Td>Row 3, Cell 2</Td>
+      <Td>Row 3, Cell 3</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Td>Footer 1</Td>
+      <Td>Footer 2</Td>
+      <Td>Footer 3</Td>
+    </Tr>
+  </Tfoot>
+</Table>

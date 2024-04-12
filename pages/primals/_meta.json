@@ -5,5 +5,10 @@
   "divider": "Divider",
   "flex": "Flex",
   "grid": "Grid",
-  "ratio": "Ratio"
+  "input": "Input",
+  "link": "Link",
+  "list": "List",
+  "spacer": "Spacer",
+  "ratio": "Ratio",
+  "table": "Table"
 }

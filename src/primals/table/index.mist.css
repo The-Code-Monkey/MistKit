@@ -4,7 +4,7 @@
         --radius: var(--radius-none);
         --bg: var(--color-neutrals-0);
         --background-color: var(--bg);
-        --w: var(--spacing-auto);
+        --w: var(--spacing-full);
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
@@ -39,9 +39,15 @@
 
         /* Table Props */
         --border-collapse: collapse;
+        --border-color: var(--color-neutrals-10);
+        --border-style: solid;
+        --border-width: var(--spacing-px);
+        --border: var(--border-width) var(--border-style) var(--border-color);
 
         /* Table Props Assigned */
         border-collapse: var(--border-collapse);
+        border: var(--border);
+
     }
 }
 
@@ -85,10 +91,13 @@
         background-color: var(--background-color);
 
         /* Table Head Props */
-        --border-bottom: 1px solid var(--color-neutrals-3);
+        --border-color: var(--color-neutrals-10);
+        --border-style: solid;
+        --border-width: var(--spacing-px);
+        --border: var(--border-width) var(--border-style) var(--border-color);
 
         /* Table Head Props Assigned */
-        border-bottom: var(--border-bottom);
+        border-bottom: var(--border);
     }
 }
 
@@ -102,7 +111,7 @@
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
-        --p: var(--spacing-0);
+        --p: var(--spacing-2);
         --pt: var(--p);
         --pr: var(--p);
         --pb: var(--p);
@@ -130,6 +139,15 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+
+        --border-color: var(--color-neutrals-10);
+        --border-style: solid;
+        --border-width: var(--spacing-px);
+        --border: var(--border-width) var(--border-style) var(--border-color);
+
+        &:not(:first-child) {
+            border-left: var(--border);
+        }
     }
 }
 
@@ -184,7 +202,7 @@
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
-        --p: var(--spacing-0);
+        --p: var(--spacing-2);
         --pt: var(--p);
         --pr: var(--p);
         --pb: var(--p);
@@ -212,6 +230,13 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+
+        --border-color: var(--color-neutrals-10);
+        --border-style: solid;
+        --border-width: var(--spacing-px);
+        --border: var(--border-width) var(--border-style) var(--border-color);
+
+        border: var(--border);
     }
 }
 

@@ -2,6 +2,8 @@
 @layer theme, base, components, utilities;
 
 :root {
+    --color-transparent: transparent;
+
     --neutrals-base: 0.01 280;
     --neutrals-0: oklch(100% var(--neutrals-base));
     --neutrals-1: oklch(98% var(--neutrals-base));
@@ -48,6 +50,8 @@
                 --color-warning-text: var(--color-text-inverse);
                 --color-info: #10169f;
                 --color-info-text: var(--color-text);
+
+                --color-disabled: color-mix(in oklch, var(--color-text), var(--color-neutrals-0) 65%);
 
                 --color-neutrals-0: var(--neutrals-26);
                 --color-neutrals-1: var(--neutrals-25);
@@ -195,6 +199,8 @@
     --color-warning-hover: #fadd05;
     --color-info-hover: #0609bf;
     --color-progress: #007bff;
+
+    --color-disabled: color-mix(in oklch, var(--color-text), var(--color-neutrals-0) 65%);
 
     --color-neutrals-0: var(--neutrals-0);
     --color-neutrals-1: var(--neutrals-1);

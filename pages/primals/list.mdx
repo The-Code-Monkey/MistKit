@@ -1,0 +1,143 @@
+import { UnorderedList, OrderedList, ListItem } from "@/primals";
+
+# ListItem
+
+The `ListItem` component is used to render a list item.
+
+This takes all the props from the default props table and all the native `<li>` element.
+
+# UnorderedList
+
+The `UnorderedList` component is used to render an unordered list.
+
+```jsx
+import {ListItem, UnorderedList as List } from "./index.mist";
+
+<List>
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</List>
+```
+
+## Props
+
+This takes all the props from the default props table and all the native `<ul>` element. Plus the following:
+
+| Name              | Type   | Default            | Description                     |
+|-------------------|--------|--------------------|---------------------------------|
+| listStyle         | string | circle inside none | The style of the list.          |
+| listStyleType     | string | circle             | The type of the list.           |
+| listStylePosition | string | inside             | The position of the list style. |
+| listStyleImage    | string | none               | The image of the list style.    |
+
+# OrderedList
+
+The `OrderedList` component is used to render an ordered list.
+
+```jsx
+import {ListItem, OrderedList as List } from "./index.mist";
+
+<List>
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</List>
+```
+
+## Props
+
+This takes all the props from the default props table and all the native `<ol>` element. Plus the following:
+
+| Name              | Type   | Default             | Description                     |
+|-------------------|--------|---------------------|---------------------------------|
+| listStyle         | string | decimal inside none | The style of the list.          |
+| listStyleType     | string | decimal             | The type of the list.           |
+| listStylePosition | string | inside              | The position of the list style. |
+| listStyleImage    | string | none                | The image of the list style.    |
+
+## Examples
+
+### Unordered List
+
+#### Default
+
+<UnorderedList>
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</UnorderedList>
+
+#### Square
+
+<UnorderedList listStyleType="square">
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</UnorderedList>
+
+#### Disc
+
+<UnorderedList listStyleType="disc">
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</UnorderedList>
+
+#### None
+
+<UnorderedList listStyleType="none">
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</UnorderedList>
+
+### Ordered List
+
+#### Default
+
+<OrderedList>
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</OrderedList>
+
+#### Lower Alpha
+
+<OrderedList listStyleType="lower-alpha">
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</OrderedList>
+
+#### Upper Alpha
+
+<OrderedList listStyleType="upper-alpha">
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</OrderedList>
+
+#### Lower Roman
+
+<OrderedList listStyleType="lower-roman">
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</OrderedList>
+
+#### Upper Roman
+
+<OrderedList listStyleType="upper-roman">
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</OrderedList>
+
+#### None
+
+<OrderedList listStyleType="none">
+  <ListItem>Item 1</ListItem>
+  <ListItem>Item 2</ListItem>
+  <ListItem>Item 3</ListItem>
+</OrderedList>

@@ -1,0 +1,41 @@
+import { Link } from '@/primals';
+
+# Link
+
+The `Link` component is a wrapper around the native `a` element. It is used to navigate between pages.
+
+```jsx
+  <Link href="/about">About</Link>
+```
+
+## Props
+
+This takes all the props from the default props table and all the native `<a>` element.
+
+| Name                    | Type   | Default   | Description                           |
+|-------------------------|--------|-----------|---------------------------------------|
+| textDecoration          | string | underline | The text decoration of the link.      |
+| textUnderlineOffset     | string | 0.5       | The offset of the text underline.     |
+| textUnderlinePosition   | string | under     | The position of the text underline.   |
+| textDecorationColor     | string | text      | The color of the text decoration.     |
+| textDecorationStyle     | string | solid     | The style of the text decoration.     |
+| textDecorationThickness | string | auto      | The thickness of the text decoration. |
+| disabled                | bool   | false     | Disables the link.                    |
+
+## Examples
+
+### External Link
+
+<Link href="https://google.com">Google</Link>
+
+### Internal Link
+
+<Link href="/primals/list">list</Link>
+
+### Link with custom text decoration
+
+<Link href="/primals/list" textDecoration="none">list</Link>
+
+### Link disabled
+
+<Link href="/primals/list" disabled>list</Link>

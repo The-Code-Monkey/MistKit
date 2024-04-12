@@ -85,7 +85,9 @@
         "@typescript-eslint/prefer-nullish-coalescing": "off",
         "unicorn/prevent-abbreviations": "off",
         "jsx-a11y/alt-text": "off",
-        "react/jsx-no-target-blank": "off"
+        "react/jsx-no-target-blank": "off",
+        "@typescript-eslint/no-unnecessary-condition": "off",
+        "@typescript-eslint/restrict-template-expressions": "off"
       }
     }
   ]

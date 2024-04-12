@@ -2,7 +2,7 @@
     a:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);
@@ -36,19 +36,33 @@
         margin-block: var(--my);
         margin-inline: var(--mx);
         background-color: var(--background-color);
+        color: var(--color-text);
 
         /* Link Props */
-        --text-decoration: none;
+        --text-decoration: underline;
+        --text-underline-offset: var(--spacing-0_5);
+        --text-underline-position: under;
+        --text-decoration-color: var(--color-text);
+        --text-decoration-thickness: var(--spacing-auto);
+        --text-decoration-style: solid;
 
         /* Link Props Assigned */
         text-decoration: var(--text-decoration);
+        text-underline-offset: var(--text-underline-offset);
+        text-underline-position: var(--text-underline-position);
+        text-decoration-color: var(--text-decoration-color);
+        text-decoration-thickness: var(--text-decoration-thickness);
+        text-decoration-style: var(--text-decoration-style);
 
         &:hover {
-            --color: var(--color-info);
+            color: var(--color-info);
+            --text-decoration-color: var(--color-info);
         }
 
-        &:visited {
-            --color: var(--color-info-hover);
+        &[data-disabled] {
+            pointer-events: none;
+            color: var(--color-disabled);
+            --text-decoration-color: var(--color-disabled);
         }
     }
 }
