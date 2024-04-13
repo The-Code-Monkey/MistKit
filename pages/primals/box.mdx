@@ -1,47 +1,51 @@
 import { Box } from '@/primals';
 
-# Box
+# Box Component
 
-The `Box` component is a primitive component that can be used to create a box with padding using the size prop (more to come).
-
-```jsx
-  <Box size="(xs|md|lg)">
-    <Text color="white">Hello, world!</Text>
-  </Box>
-```
+The `Box` component is a primitive component that can be used to create a box with padding and other style properties.
 
 ## Props
 
-| Prop     | Type             | Description                                  |
-|:---------|:-----------------|:---------------------------------------------|
-| children | ReactNode        | The content of the Box component.            |
-| height   | number \| string | The height of the Box container.             |
-| m        | number \| string | The margin around the Box container.         |
-| mb       | number \| string | The bottom margin of the Box container.      |
-| ml       | number \| string | The left margin of the Box container.        |
-| mr       | number \| string | The right margin of the Box container.       |
-| mt       | number \| string | The top margin of the Box container.         |
-| mx       | number \| string | The horizontal margin of the Box container.  |
-| my       | number \| string | The vertical margin of the Box container.    |
-| p        | number \| string | The padding around the Box container.        |
-| pb       | number \| string | The bottom padding of the Box container.     |
-| pl       | number \| string | The left padding of the Box container.       |
-| pr       | number \| string | The right padding of the Box container.      |
-| pt       | number \| string | The top padding of the Box container.        |
-| px       | number \| string | The horizontal padding of the Box container. |
-| py       | number \| string | The vertical padding of the Box container.   |
-| width    | number \| string | The width of the Box container.              |
+The `Box` component accepts the following props:
 
+| Prop              | Description                                                     | Type   |
+|-------------------|-----------------------------------------------------------------|--------|
+| `children`        | The content of the Box component.                               | Node   |
+| `radius`          | A string that sets the border radius of the Box.                | String |
+| `bg`              | A string that sets the background color of the Box.             | String |
+| `backgroundColor` | A string that sets the background color of the Box.             | String |
+| `w`               | A string that sets the width of the Box.                        | String |
+| `h`               | A string that sets the height of the Box.                       | String |
+| `width`           | A string that sets the width of the Box.                        | String |
+| `height`          | A string that sets the height of the Box.                       | String |
+| `p`               | A string that sets the padding of the Box.                      | String |
+| `pt`              | A string that sets the top padding of the Box.                  | String |
+| `pr`              | A string that sets the right padding of the Box.                | String |
+| `pb`              | A string that sets the bottom padding of the Box.               | String |
+| `pl`              | A string that sets the left padding of the Box.                 | String |
+| `px`              | A string that sets the horizontal padding of the Box.           | String |
+| `py`              | A string that sets the vertical padding of the Box.             | String |
+| `padding`         | A string that sets the padding of the Box.                      | String |
+| `m`               | A string that sets the margin of the Box.                       | String |
+| `mt`              | A string that sets the top margin of the Box.                   | String |
+| `mb`              | A string that sets the bottom margin of the Box.                | String |
+| `mr`              | A string that sets the right margin of the Box.                 | String |
+| `ml`              | A string that sets the left margin of the Box.                  | String |
+| `mx`              | A string that sets the horizontal margin of the Box.            | String |
+| `my`              | A string that sets the vertical margin of the Box.              | String |
+| `margin`          | A string that sets the margin of the Box.                       | String |
+| `size`            | A string that sets the size of the Box. It can be 'sm' or 'lg'. | String |
 
-## Examples
+## Usage
 
-### sm
-<Box size="sm" bg="red-600">
-  Hello world
+<Box bg="red-600" size="sm">
+  Hello, world!
 </Box>
 
-
-### lg
-<Box size="lg" bg="green-800">
-  Hello world
+```jsx
+<Box
+  bg="red-600"
+  size="sm"
+>
+  Hello, world!
 </Box>

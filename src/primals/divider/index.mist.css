@@ -7,7 +7,7 @@
         --width: auto;
 
         /* Global Props */
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);

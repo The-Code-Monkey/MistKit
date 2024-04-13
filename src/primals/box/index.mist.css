@@ -2,13 +2,13 @@
     div:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
-        --p: var(--spacing-2);
+        --p: var(--spacing-0);
         --pt: var(--p);
         --pr: var(--p);
         --pb: var(--p);

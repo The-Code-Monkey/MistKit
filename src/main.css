@@ -85,6 +85,8 @@
 }
 
 @theme {
+    --default-transition-duration: 300ms;
+    --default-transition-timing-function: ease-in-out;
     --dir-row: row;
     --dir-row-reverse: row-reverse;
     --dir-column: column;
@@ -232,7 +234,7 @@
 
     @keyframes mixin {
         from, to {
-            --bg: var(--color-neutrals-0);
+            --bg: var(--color-transparent);
             --background-color: var(--bg);
             --w: unset;
             --h: unset;

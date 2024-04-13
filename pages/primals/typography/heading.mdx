@@ -1,0 +1,69 @@
+import { Heading } from "@/primals";
+
+# Heading Component
+
+The `Heading` component is a functional component that returns a heading element with various style properties.
+
+## Props
+
+The `Heading` component accepts the following props:
+
+| Name                  | Type   | Default Value                                 | Description                                                                                                                   |
+|-----------------------|--------|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| fontSize              | string | `var(--font-size-base)`                       | Font size of the text                                                                                                         |
+| fontWeight            | string | `var(--font-weight-normal)`                   | Font weight of the text                                                                                                       |
+| fontStyle             | string | `var(--font-style-normal)`                    | Font style of the text                                                                                                        |
+| fontFamily            | string | `var(--font-family-sans)`                     | Font family of the text                                                                                                       |
+| font                  | string | `var(--font)`                                 | Shorthand for setting all font properties                                                                                     |
+| color                 | string | `var(--color-neutrals-9)`                     | Color of the text                                                                                                             |
+| textAlign             | string | `var(--text-align-left)`                      | Horizontal alignment of the text                                                                                              |
+| textTransform         | string | `var(--text-transform-none)`                  | Controls the capitalization of text                                                                                           |
+| lineHeight            | string | `var(--line-height-none)`                     | Space between lines                                                                                                           |
+| letterSpacing         | string | `var(--letter-spacing-normal)`                | Spacing between characters                                                                                                    |
+| whiteSpace            | string | `var(--white-space-normal)`                   | How white space inside an element is handled                                                                                  |
+| wordBreak             | string | `var(--word-break-normal)`                    | Specifies how words should break when reaching the end of a line                                                              |
+| overflowWrap          | string | `var(--overflow-wrap-normal)`                 | Specifies whether or not the browser may break lines within words in order to prevent overflow                                |
+| wordWrap              | string | `var(--word-wrap-normal)`                     | Legacy version of the `overflowWrap` property                                                                                 |
+| hyphens               | string | `var(--hyphens-none)`                         | Controls how words should be hyphenated when text wraps across multiple lines                                                 |
+| textOrientation       | string | `var(--text-orientation-mixed)`               | Defines the orientation of the text in a line                                                                                 |
+| textRendering         | string | `var(--text-rendering-auto)`                  | Provides information to the rendering engine about what to optimize for when rendering text                                   |
+| textSizeAdjust        | string | `var(--text-size-adjust-auto)`                | Allows web authors to disable or modify the text inflation algorithm on a per-element basis                                   |
+| textUnderlinePosition | string | `var(--text-underline-position-auto)`         | Sets the placement of the underline on links or on underlined text                                                            |
+| textUnderlineOffset   | string | `var(--text-underline-offset-auto)`           | Sets the offset distance of an underline text decoration line (applied through text-decoration) from its original position    |
+| textUnderlineStyle    | string | `var(--text-underline-style-solid)`           | Sets the style of the underline on links or on underlined text                                                                |
+| textUnderlineColor    | string | `var(--text-underline-color-currentColor)`    | Sets the color of the underline on links or on underlined text                                                                |
+| textUnderline         | string | `var(--text-underline)`                       | Shorthand for setting all the underline properties                                                                            |
+| textOverlineStyle     | string | `var(--text-overline-style-solid)`            | Sets the style of the overline on links or on overlined text                                                                  |
+| textOverlineColor     | string | `var(--text-overline-color-currentColor)`     | Sets the color of the overline on links or on overlined text                                                                  |
+| textOverline          | string | `var(--text-overline)`                        | Shorthand for setting all the overline properties                                                                             |
+| textLineThroughStyle  | string | `var(--text-line-through-style-solid)`        | Sets the style of the line-through on links or on line-through text                                                           |
+| textLineThroughColor  | string | `var(--text-line-through-color-currentColor)` | Sets the color of the line-through on links or on line-through text                                                           |
+| textLineThrough       | string | `var(--text-line-through)`                    | Shorthand for setting all the line-through properties                                                                         |
+| textDecorationLine    | string | `var(--text-decoration-line-none)`            | Sets the kind of text decoration to use (like underline, overline, line-through)                                              |
+| textDecorationStyle   | string | `var(--text-decoration-style-solid)`          | Sets the style of the text decoration (like solid, wavy, dotted, dashed, double)                                              |
+| textDecorationColor   | string | `var(--text-decoration-color-currentColor)`   | Sets the color of the text decoration                                                                                         |
+| textDecoration        | string | `var(--text-decoration)`                      | Shorthand for setting all the text-decoration-* properties                                                                    |
+| textShadow            | string | `var(--text-shadow-none)`                     | Applies one or more shadows to the text                                                                                       |
+| textOverflow          | string | `var(--text-overflow-clip)`                   | Specifies how overflowed content that is not displayed should be signaled to the user                                         |
+| textJustify           | string | `var(--text-justify-auto)`                    | Specifies the justification method to use when a line box is justified                                                        |
+| textIndent            | string | `var(--text-indent-none)`                     | Specifies the indentation of the first line in a text block                                                                   |
+| textJustifyTrim       | string | `var(--text-justify-trim-auto)`               | Specifies the justification method to use when a line box is justified and has trailing white space                           |
+| textAlignLast         | string | `var(--text-align-last-auto)`                 | Describes how the last line of a block or a line, right before a forced line break, is aligned when `text-align` is `justify` |
+
+## Usage
+
+<Heading
+  color="red-500"
+  fontWeight="bold"
+  dangerouslySetInnerHTML={{
+    __html: "This will render a heading of text with the color set to red-500, and the font weight set to bold."
+  }}
+/>
+
+```jsx
+<Heading
+  color="red-500"
+  fontWeight="bold"
+>
+  Hello, world!
+</Heading>

@@ -1,38 +1,60 @@
 import { Divider, Flex, Box } from "@/primals"
 
-# Divider
+# Divider Component
 
-The `Divider` component is a horizontal line that separates content.
-
-```
-<Divider />
-```
+The `Divider` component is a styled horizontal rule (`<hr>`) element that can be used to create a visual division in your application.
 
 ## Props
 
-| Prop  | Type             | Description                                      |
-|:------|:-----------------|:-------------------------------------------------|
-| m     | number \| string | The margin around the Divider container.         |
-| mb    | number \| string | The bottom margin of the Divider container.      |
-| ml    | number \| string | The left margin of the Divider container.        |
-| mr    | number \| string | The right margin of the Divider container.       |
-| mt    | number \| string | The top margin of the Divider container.         |
-| mx    | number \| string | The horizontal margin of the Divider container.  |
-| my    | number \| string | The vertical margin of the Divider container.    |
-| p     | number \| string | The padding around the Divider container.        |
-| pb    | number \| string | The bottom padding of the Divider container.     |
-| pl    | number \| string | The left padding of the Divider container.       |
-| pr    | number \| string | The right padding of the Divider container.      |
-| pt    | number \| string | The top padding of the Divider container.        |
-| px    | number \| string | The horizontal padding of the Divider container. |
-| py    | number \| string | The vertical padding of the Divider container.   |
-| width | number \| string | The width of the Divider container.              |
-| color | string           | The color of the Divider.                        |
-| style | string           | The style of the Divider.                        |
-| size  | string           | The size of the Divider.                         |
+The `Divider` component accepts the following props:
+
+| Prop              | Description                                               | Type   |
+|-------------------|-----------------------------------------------------------|--------|
+| `color`           | A string that sets the color of the Divider.              | String |
+| `size`            | A string that sets the size of the Divider.               | String |
+| `style`           | A string that sets the style of the Divider.              | String |
+| `width`           | A string that sets the width of the Divider.              | String |
+| `bg`              | A string that sets the background color of the Divider.   | String |
+| `backgroundColor` | A string that sets the background color of the Divider.   | String |
+| `w`               | A string that sets the width of the Divider.              | String |
+| `h`               | A string that sets the height of the Divider.             | String |
+| `p`               | A string that sets the padding of the Divider.            | String |
+| `pt`              | A string that sets the top padding of the Divider.        | String |
+| `pr`              | A string that sets the right padding of the Divider.      | String |
+| `pb`              | A string that sets the bottom padding of the Divider.     | String |
+| `pl`              | A string that sets the left padding of the Divider.       | String |
+| `px`              | A string that sets the horizontal padding of the Divider. | String |
+| `py`              | A string that sets the vertical padding of the Divider.   | String |
+| `padding`         | A string that sets the padding of the Divider.            | String |
+| `m`               | A string that sets the margin of the Divider.             | String |
+| `mt`              | A string that sets the top margin of the Divider.         | String |
+| `mb`              | A string that sets the bottom margin of the Divider.      | String |
+| `mr`              | A string that sets the right margin of the Divider.       | String |
+| `ml`              | A string that sets the left margin of the Divider.        | String |
+| `mx`              | A string that sets the horizontal margin of the Divider.  | String |
+| `my`              | A string that sets the vertical margin of the Divider.    | String |
+| `margin`          | A string that sets the margin of the Divider.             | String |
+
 
 
 ## Examples
+
+<Divider
+  color="red-500"
+  size="8px"
+  style="dashed"
+  width="100%"
+  my="4"
+/>
+
+```jsx
+<Divider
+  color="red-500"
+  size="8px"
+  style="dashed"
+  width="100%"
+/>
+```
 
 ### Default
 <br />

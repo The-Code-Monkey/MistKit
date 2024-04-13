@@ -2,7 +2,7 @@
     ul:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);
@@ -62,7 +62,7 @@
     li:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);

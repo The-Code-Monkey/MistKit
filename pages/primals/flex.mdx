@@ -1,48 +1,89 @@
 import { Flex, Button } from "@/primals"
 
-# Flex
+# Flex Component
 
-The `Flex` component is a wrapper around the flex logic.
-
-```jsx
-<Flex>
-  <Button>item 1</Button>
-  <Button>item 2</Button>
-  <Button>item 3</Button>
-</Flex>
-```
+The `Flex` component is a flexible box layout component for building responsive layouts in your application.
 
 ## Props
 
-| Prop         | Type                                                               | Description                                                                                                         |
-|:-------------|:-------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
-| align        | "baseline" \| "center" \| "end" \| "start" \| "stretch"            | Aligns flex items along the cross axis of the current line of the flex container.                                   |
-| alignContent | "around" \| "between" \| "center" \| "end" \| "start" \| "stretch" | Aligns a flex container's lines within the flex container when there is extra space in the cross-axis.              |
-| children     | ReactNode                                                          | The content of the Flex component.                                                                                  |
-| dir          | "col-reverse" \| "col" \| "row-reverse" \| "row"                   | The direction of the flex items.                                                                                    |
-| direction    | "col-reverse" \| "col" \| "row-reverse" \| "row"                   | The direction of the flex items.                                                                                    |
-| gap          | number \| string                                                   | The size of the gap between flex items.                                                                             |
-| gapX         | number \| string                                                   | The size of the horizontal gap between flex items.                                                                  |
-| gapY         | number \| string                                                   | The size of the vertical gap between flex items.                                                                    |
-| height       | number \| string                                                   | The height of the Flex container.                                                                                   |
-| justify      | "around" \| "between" \| "center" \| "end" \| "start"              | Defines how the browser distributes space between and around content items along the main-axis of a flex container. |
-| m            | number \| string                                                   | The margin around the Flex container.                                                                               |
-| mb           | number \| string                                                   | The bottom margin of the Flex container.                                                                            |
-| ml           | number \| string                                                   | The left margin of the Flex container.                                                                              |
-| mr           | number \| string                                                   | The right margin of the Flex container.                                                                             |
-| mt           | number \| string                                                   | The top margin of the Flex container.                                                                               |
-| mx           | number \| string                                                   | The horizontal margin of the Flex container.                                                                        |
-| my           | number \| string                                                   | The vertical margin of the Flex container.                                                                          |
-| p            | number \| string                                                   | The padding around the Flex container.                                                                              |
-| pb           | number \| string                                                   | The bottom padding of the Flex container.                                                                           |
-| pl           | number \| string                                                   | The left padding of the Flex container.                                                                             |
-| pr           | number \| string                                                   | The right padding of the Flex container.                                                                            |
-| pt           | number \| string                                                   | The top padding of the Flex container.                                                                              |
-| px           | number \| string                                                   | The horizontal padding of the Flex container.                                                                       |
-| py           | number \| string                                                   | The vertical padding of the Flex container.                                                                         |
-| width        | number \| string                                                   | The width of the Flex container.                                                                                    |
-| wrap         | "nowrap" \| "wrap-reverse" \| "wrap"                               | Specifies whether flex items are forced onto one line or can wrap onto multiple lines.                              |
+The `Flex` component accepts the following props:
 
+| Prop              | Description                                                            | Type   |
+|-------------------|------------------------------------------------------------------------|--------|
+| `dir`             | A string that sets the direction of the Flex container.                | String |
+| `direction`       | A string that sets the direction of the Flex container.                | String |
+| `wrap`            | A string that sets the wrap property of the Flex container.            | String |
+| `justify`         | A string that sets the justify-content property of the Flex container. | String |
+| `items`           | A string that sets the align-items property of the Flex container.     | String |
+| `content`         | A string that sets the align-content property of the Flex container.   | String |
+| `gap`             | A string that sets the gap between Flex items.                         | String |
+| `gapX`            | A string that sets the horizontal gap between Flex items.              | String |
+| `gapY`            | A string that sets the vertical gap between Flex items.                | String |
+| `flex`            | A string that sets the flex property of the Flex container.            | String |
+| `radius`          | A string that sets the border radius of the Flex container.            | String |
+| `bg`              | A string that sets the background color of the Flex container.         | String |
+| `backgroundColor` | A string that sets the background color of the Flex container.         | String |
+| `w`               | A string that sets the width of the Flex container.                    | String |
+| `h`               | A string that sets the height of the Flex container.                   | String |
+| `width`           | A string that sets the width of the Flex container.                    | String |
+| `height`          | A string that sets the height of the Flex container.                   | String |
+| `p`               | A string that sets the padding of the Flex container.                  | String |
+| `pt`              | A string that sets the top padding of the Flex container.              | String |
+| `pr`              | A string that sets the right padding of the Flex container.            | String |
+| `pb`              | A string that sets the bottom padding of the Flex container.           | String |
+| `pl`              | A string that sets the left padding of the Flex container.             | String |
+| `px`              | A string that sets the horizontal padding of the Flex container.       | String |
+| `py`              | A string that sets the vertical padding of the Flex container.         | String |
+| `padding`         | A string that sets the padding of the Flex container.                  | String |
+| `m`               | A string that sets the margin of the Flex container.                   | String |
+| `mt`              | A string that sets the top margin of the Flex container.               | String |
+| `mb`              | A string that sets the bottom margin of the Flex container.            | String |
+| `mr`              | A string that sets the right margin of the Flex container.             | String |
+| `ml`              | A string that sets the left margin of the Flex container.              | String |
+| `mx`              | A string that sets the horizontal margin of the Flex container.        | String |
+| `my`              | A string that sets the vertical margin of the Flex container.          | String |
+| `margin`          | A string that sets the margin of the Flex container.                   | String |
+
+## Usage
+
+<Flex
+  dir="row"
+  wrap="wrap"
+  justify="center"
+  items="start"
+  content="start"
+  gap="2"
+  radius="md"
+  bg="red-500"
+  w="full"
+  p="4"
+  m="2"
+>
+  <Button>Item 1</Button>
+  <Button>Item 2</Button>
+  <Button>Item 3</Button>
+</Flex>
+
+```jsx
+<Flex
+  dir="row"
+  wrap="wrap"
+  justify="center"
+  items="start"
+  content="start"
+  gap="2"
+  radius="md"
+  bg="primary"
+  w="full"
+  h="full"
+  p="4"
+  m="2"
+>
+  <Button>Item 1</Button>
+  <Button>Item 2</Button>
+  <Button>Item 3</Button>
+</Flex>
+```
 
 ## Examples
 

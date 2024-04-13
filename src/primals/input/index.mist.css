@@ -2,7 +2,7 @@
     input:scope {
         /* Global Props */
         --radius: var(--radius-md);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-full);
         --h: var(--spacing-10);

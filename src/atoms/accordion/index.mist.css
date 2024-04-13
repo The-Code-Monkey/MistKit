@@ -2,7 +2,7 @@
     details:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-full);
         --h: var(--spacing-8);
@@ -58,7 +58,7 @@
     summary:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: unset;
         --h: var(--spacing-full);
@@ -117,7 +117,7 @@
     div:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);

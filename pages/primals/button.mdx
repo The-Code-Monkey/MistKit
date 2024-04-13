@@ -1,58 +1,65 @@
 import { Button } from '@/primals';
 
-# Button
+# Button Component
 
 The `Button` component is a styled button element that can be used to trigger actions in your application.
 
+## Props
+
+The `Button` component accepts the following props:
+
+| Prop                   | Description                                                                                        | Type   |
+|------------------------|----------------------------------------------------------------------------------------------------|--------|
+| `children`             | The content of the Button component.                                                               | Node   |
+| `borderColor`          | A string that sets the border color of the Button.                                                 | String |
+| `border`               | A string that sets the border of the Button.                                                       | String |
+| `shadow`               | A string that sets the shadow of the Button.                                                       | String |
+| `transitionFunction`   | A string that sets the transition function of the Button.                                          | String |
+| `transitionTiming`     | A string that sets the transition timing of the Button.                                            | String |
+| `transitionProperties` | A string that sets the transition properties of the Button.                                        | String |
+| `radius`               | A string that sets the border radius of the Button.                                                | String |
+| `bg`                   | A string that sets the background color of the Button.                                             | String |
+| `backgroundColor`      | A string that sets the background color of the Button.                                             | String |
+| `w`                    | A string that sets the width of the Button.                                                        | String |
+| `h`                    | A string that sets the height of the Button.                                                       | String |
+| `width`                | A string that sets the width of the Button.                                                        | String |
+| `height`               | A string that sets the height of the Button.                                                       | String |
+| `p`                    | A string that sets the padding of the Button.                                                      | String |
+| `pt`                   | A string that sets the top padding of the Button.                                                  | String |
+| `pr`                   | A string that sets the right padding of the Button.                                                | String |
+| `pb`                   | A string that sets the bottom padding of the Button.                                               | String |
+| `pl`                   | A string that sets the left padding of the Button.                                                 | String |
+| `px`                   | A string that sets the horizontal padding of the Button.                                           | String |
+| `py`                   | A string that sets the vertical padding of the Button.                                             | String |
+| `padding`              | A string that sets the padding of the Button.                                                      | String |
+| `m`                    | A string that sets the margin of the Button.                                                       | String |
+| `mt`                   | A string that sets the top margin of the Button.                                                   | String |
+| `mb`                   | A string that sets the bottom margin of the Button.                                                | String |
+| `mr`                   | A string that sets the right margin of the Button.                                                 | String |
+| `ml`                   | A string that sets the left margin of the Button.                                                  | String |
+| `mx`                   | A string that sets the horizontal margin of the Button.                                            | String |
+| `my`                   | A string that sets the vertical margin of the Button.                                              | String |
+| `margin`               | A string that sets the margin of the Button.                                                       | String |
+| `size`                 | A string that sets the size of the Button. It can be 'sm' or 'lg'.                                 | String |
+| `variant`              | A string that sets the variant of the Button. It can be 'danger', 'info', 'success', or 'warning'. | String |
+
+## Usage
+
+<Button
+  borderColor="red-500"
+  size="sm"
+  variant="success"
+  my="4"
+>
+  Click me!
+</Button>
+
 ```jsx
 <Button
-  size="(sm|lg)"
-  variant="(success|info|warning|danger)"
-  onClick={() => alert('Button clicked!')}
+  borderColor="red-500"
+  size="sm"
+  variant="success"
 >
   Click me!
 </Button>
 ```
-
-## Props
-
-| Prop     | Type                                         | Description                                     | Default |
-|:---------|:---------------------------------------------|:------------------------------------------------|:--------|
-| children | ReactNode                                    | The content of the Button component.            | -       |
-| height   | number \| string                             | The height of the Button container.             | -       |
-| m        | number \| string                             | The margin around the Button container.         | -       |
-| mb       | number \| string                             | The bottom margin of the Button container.      | -       |
-| ml       | number \| string                             | The left margin of the Button container.        | -       |
-| mr       | number \| string                             | The right margin of the Button container.       | -       |
-| mt       | number \| string                             | The top margin of the Button container.         | -       |
-| mx       | number \| string                             | The horizontal margin of the Button container.  | -       |
-| my       | number \| string                             | The vertical margin of the Button container.    | -       |
-| p        | number \| string                             | The padding around the Button container.        | 2       |
-| pb       | number \| string                             | The bottom padding of the Button container.     | -       |
-| pl       | number \| string                             | The left padding of the Button container.       | -       |
-| pr       | number \| string                             | The right padding of the Button container.      | -       |
-| pt       | number \| string                             | The top padding of the Button container.        | -       |
-| px       | number \| string                             | The horizontal padding of the Button container. | -       |
-| py       | number \| string                             | The vertical padding of the Button container.   | -       |
-| width    | number \| string                             | The width of the Button container.              | -       |
-| variant  | "danger" \| "info" \| "success" \| "warning" | The variant of the Button component.            | -       |
-
-## Examples
-
-### Sizes
-
-<Button size="sm">Small</Button>
-
-<Button size="md">Medium</Button>
-
-<Button size="lg">Large</Button>
-
-### Variants
-
-<Button variant="success" transition='unset'>Success</Button>
-
-<Button variant="info">Info</Button>
-
-<Button variant="warning">Warning</Button>
-
-<Button variant="danger">Danger</Button>

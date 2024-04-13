@@ -2,16 +2,16 @@
     p:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
-        --pt: var(--p);
+        --pt: var(--spacing-4);
         --pr: var(--p);
-        --pb: var(--p);
+        --pb: var(--spacing-4);
         --pl: var(--p);
         --px: var(--pl) var(--pr);
         --py: var(--pt) var(--pb);
@@ -38,12 +38,12 @@
         background-color: var(--background-color);
 
         /* !* Text Props *! */
-        --font-size: var(--fontSize-base);
-        --font-weight: var(--fontWeight-normal);
-        --font-style: var(--fontStyle-normal);
-        --font-family: var(--fontFamily-sans);
+        --font-size: var(--font-size-base);
+        --font-weight: var(--font-weight-normal);
+        --font-style: var(--font-style-normal);
+        --font-family: var(--font-family-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
-        --color: var(--color-neutrals-9);
+        --color: var(--color-text);
         --text-align: var(--text-align-left);
         --text-transform: var(--text-transform-none);
         --line-height: var(--line-height-none);
@@ -137,16 +137,16 @@
     h1:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
-        --pt: var(--p);
+        --pt: var(--spacing-4);
         --pr: var(--p);
-        --pb: var(--p);
+        --pb: var(--spacing-4);
         --pl: var(--p);
         --px: var(--pl) var(--pr);
         --py: var(--pt) var(--pb);
@@ -173,12 +173,12 @@
         background-color: var(--background-color);
 
         /* Text Props */
-        --font-size: var(--fontSize-base);
-        --font-weight: var(--fontWeight-normal);
-        --font-style: var(--fontStyle-normal);
-        --font-family: var(--fontFamily-sans);
+        --font-size: var(--font-size-4xl);
+        --font-weight: var(--font-weight-normal);
+        --font-style: var(--font-style-normal);
+        --font-family: var(--font-family-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
-        --color: var(--color-neutrals-9);
+        --color: var(--color-text);
         --text-align: var(--text-align-left);
         --text-transform: var(--text-transform-none);
         --line-height: var(--line-height-none);
@@ -256,16 +256,16 @@
     h2:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
-        --pt: var(--p);
+        --pt: var(--spacing-4);
         --pr: var(--p);
-        --pb: var(--p);
+        --pb: var(--spacing-4);
         --pl: var(--p);
         --px: var(--pl) var(--pr);
         --py: var(--pt) var(--pb);
@@ -292,12 +292,12 @@
         background-color: var(--background-color);
 
         /* Text Props */
-        --font-size: var(--fontSize-base);
-        --font-weight: var(--fontWeight-normal);
-        --font-style: var(--fontStyle-normal);
-        --font-family: var(--fontFamily-sans);
+        --font-size: var(--font-size-3xl);
+        --font-weight: var(--font-weight-normal);
+        --font-style: var(--font-style-normal);
+        --font-family: var(--font-family-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
-        --color: var(--color-neutrals-9);
+        --color: var(--color-text);
         --text-align: var(--text-align-left);
         --text-transform: var(--text-transform-none);
         --line-height: var(--line-height-none);
@@ -375,16 +375,16 @@
     h3:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
-        --pt: var(--p);
+        --pt: var(--spacing-4);
         --pr: var(--p);
-        --pb: var(--p);
+        --pb: var(--spacing-4);
         --pl: var(--p);
         --px: var(--pl) var(--pr);
         --py: var(--pt) var(--pb);
@@ -411,12 +411,12 @@
         background-color: var(--background-color);
 
         /* Text Props */
-        --font-size: var(--fontSize-base);
-        --font-weight: var(--fontWeight-normal);
-        --font-style: var(--fontStyle-normal);
-        --font-family: var(--fontFamily-sans);
+        --font-size: var(--font-size-2xl);
+        --font-weight: var(--font-weight-normal);
+        --font-style: var(--font-style-normal);
+        --font-family: var(--font-family-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
-        --color: var(--color-neutrals-9);
+        --color: var(--color-text);
         --text-align: var(--text-align-left);
         --text-transform: var(--text-transform-none);
         --line-height: var(--line-height-none);
@@ -494,16 +494,16 @@
     h4:scope {
         /* Global Props */
         --radius: var(--radius-none);
-        --bg: var(--color-neutrals-0);
+        --bg: var(--color-transparent);
         --background-color: var(--bg);
         --w: var(--spacing-auto);
         --h: var(--spacing-auto);
         --width: var(--w);
         --height: var(--h);
         --p: var(--spacing-0);
-        --pt: var(--p);
+        --pt: var(--spacing-4);
         --pr: var(--p);
-        --pb: var(--p);
+        --pb: var(--spacing-4);
         --pl: var(--p);
         --px: var(--pl) var(--pr);
         --py: var(--pt) var(--pb);
@@ -530,12 +530,12 @@
         background-color: var(--background-color);
 
         /* Text Props */
-        --font-size: var(--fontSize-base);
-        --font-weight: var(--fontWeight-normal);
-        --font-style: var(--fontStyle-normal);
-        --font-family: var(--fontFamily-sans);
+        --font-size: var(--font-size-xl);
+        --font-weight: var(--font-weight-normal);
+        --font-style: var(--font-style-normal);
+        --font-family: var(--font-family-sans);
         --font: var(--font-style) var(--font-weight) var(--font-size) var(--font-family);
-        --color: var(--color-neutrals-9);
+        --color: var(--color-text);
         --text-align: var(--text-align-left);
         --text-transform: var(--text-transform-none);
         --line-height: var(--line-height-none);
